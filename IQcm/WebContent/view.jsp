@@ -10,20 +10,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" href="/testProject/css/screen.css" type="text/css" media="screen" title="css" charset="utf-8" />
-        <title>Projet QCM</title>
+        <link rel="stylesheet" href="<%= request.getContextPath() %>/css/bootstrap.css" type="text/css" media="screen" title="css" charset="utf-8" />
+		<link rel="stylesheet" href="<%= request.getContextPath() %>/css/index.css" type="text/css" media="screen" title="css" charset="utf-8" />
+ 		<title>Projet QCM</title>
     </head>
     <body>
-        <div id="content">
+        <div class="container">
             <jsp:include page="scripts/header.jsp" />
-            <div id="body">
-                <jsp:include page="scripts/menu_left.jsp" />
-                <div id="contenu">
+            <div class="row margtop">
+            	<div class="col-lg-2">
+                	<jsp:include page="scripts/menu_left.jsp" />
+            	</div>
+                <div class="col-lg-10">
                     <jsp:include page="<%= layout%>" />
                 </div>
-            </div>
-
-            <div id="footer">
             </div>
         </div>
     </body>

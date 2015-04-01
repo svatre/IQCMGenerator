@@ -10,8 +10,12 @@
                 request.getRequestDispatcher("/index.jsp").forward(request, response);
             }
 %>
-<p id="top">Bienvenue <%= user.getPrenom()%> <%= user.getNom()%>, <a href="<%= request.getContextPath()%>/logout.html">Déconnexion</a></p>
-<div id="logo">
-    <h1><a href="<%= request.getContextPath()%>/index.html">Qcm Generator</a></h1>
+       
+<div class="row">
+	<div class="col-lg-12 head">
+		<h1><a class="qcm" href="<%= request.getContextPath() %>">QCM Generator</a></h1>
+			<p class="right">
+				Bienvenue <%= user.getPrenom()%> <%= user.getNom()%>, <a class="white" href="<%= request.getContextPath()%>/logout.html">Déconnexion</a>
+			</p>
+	</div>
 </div>
-<div class="line"></div>

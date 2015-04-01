@@ -8,9 +8,8 @@
 <%
     User user = (User) request.getSession().getAttribute("user");
 %>
-<h4>Accueil de Qcm Generator</h4>
 
-<div id="statistiques">
-    <p>Bienvenue sur l'application QCM Generator<br/>
+<div id="statistiques" class="margtop">
+    <p class="margleft">Bienvenue sur l'application QCM Generator<br/>
 
 </div>

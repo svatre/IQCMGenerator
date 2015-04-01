@@ -27,12 +27,20 @@
                        }%>
                     </ul>
                     <%if (user.isAdmin()) {%>
-                    <ul class="menu_gauche">
-                    	<h5>Admin</h5>
-                        <a href="<%= request.getContextPath()%>/admin/themes/index.html"><li>Thèmes</li></a>
-                        <a href="<%= request.getContextPath()%>/admin/niveaux/index.html"><li>Niveau</li></a>
-                        <a href="<%= request.getContextPath()%>/admin/questionnaires/index.html"><li>Questionnaires</li></a>
-                        <a href="<%= request.getContextPath()%>/admin/users/index.html"><li>Utilisateurs</li></a>
+                    <ul class="menu_gauche right">
+                    	<h4>Administrateur</h4>
+                        <button class="btn btn-sm btn-default btn_menu">
+                        	<a href="<%= request.getContextPath()%>/admin/themes/index.html">Thèmes</a>
+                        </button>
+                        <button class="btn btn-sm btn-default btn_menu">
+	                        <a href="<%= request.getContextPath()%>/admin/niveaux/index.html">Niveau</a>
+	                     </button>
+	                     <button class="btn btn-sm btn-default btn_menu">   
+	                        <a href="<%= request.getContextPath()%>/admin/questionnaires/index.html">Questionnaires</a>
+	                     </button>
+	                     <button class="btn btn-sm btn-default btn_menu">  
+	                        <a href="<%= request.getContextPath()%>/admin/users/index.html">Utilisateurs</a>
+                    	</button>
                     </ul>
                     <% }%>
                 </div>

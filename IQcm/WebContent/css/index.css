@@ -1,3 +1,59 @@
+.head {
+	background-color: grey;
+}
+
+.qcm {
+	color: antiquewhite;
+	font-weight: bold;
+}
+
+.right {
+	text-align:right;
+}
+
+.white {
+	color: white;
+	font-style: italic;
+}
+
+.btn_menu {
+	width:150px;
+}
+
+.btn_menu a {
+	color: brown;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.btn_menu a:hover {
+	text-decoration: none;
+}
+
+.menu_gauche h4 {
+	text-align:center;
+	font-weight:bold;
+}
+
+.margleft {
+	margin-left: 50px;
+}
+
+.brownBold {
+	color: brown;
+	font-weight:bold;
+}
+
+.add a {
+	color: white;
+}
+
+.add a:hover {
+	text-decoration:none;
+}
+
+
+/* BEFORE */
 .margbott {
 	margin-bottom: 20px !important;
 }
