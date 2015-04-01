@@ -28,7 +28,7 @@
                     </ul>
                     <%if (user.isAdmin()) {%>
                     <ul class="menu_gauche right">
-                    	<h4>Administrateur</h4>
+                    	<h4 class="margbott2">Administrateur</h4>
                         <button class="btn btn-sm btn-default btn_menu">
                         	<a href="<%= request.getContextPath()%>/admin/themes/index.html">Thèmes</a>
                         </button>

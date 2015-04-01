@@ -3,7 +3,7 @@
 <%@page import="qcm.models.Questionnaire"%>
 <%@page import="java.util.HashMap"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<h4 class="margleft brownBold">Gérer les questionnaires</h4>
+<h4 class="margleft brownBold margbott2">Gérer les questionnaires</h4>
 <jsp:include page="/scripts/errorViewHelper.jsp" />
 
 <%

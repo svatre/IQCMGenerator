@@ -4,7 +4,7 @@
 <%@page import="java.util.List"%>
 <%@page import="java.util.Map"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<h4>Ajouter un utilisateur</h4>
+<h4 class="margleft brownBold margbott2">Ajouter un utilisateur</h4>
 <jsp:include page="/scripts/errorViewHelper.jsp" />
 
 <%
@@ -12,12 +12,11 @@
             Map<String, String> errors = (Map<String, String>) request.getAttribute("errors");
 %>
 
-<div  class="choice">
     <form action="<%= request.getContextPath()%>/admin/users/ajouter.html" method="post">
-        <table>
+        <table class="table table-hover">
             <tr>
-                <td><label for="login"><strong>Login : </strong></label></td>
-                <td><input type="text" name="login" id="login" size="50" class="medium-input
+                <td><label for="login"><strong>Login</strong></label></td>
+                <td><input type="text" name="login" id="login" size="50" class="form-control
                            <% if ((errors != null) && errors.get("login").isEmpty()) {
                                            out.print("error-input");
                                        }
@@ -25,8 +24,8 @@
                            " value='<%= errors == null ? "" : errors.get("login")%>' /></td>
             </tr>
             <tr>
-                <td><label for="nom"><strong>Nom : </strong></label></td>
-                <td><input type="text" name="nom" id="nom" size="50" class="medium-input
+                <td><label for="nom"><strong>Nom</strong></label></td>
+                <td><input type="text" name="nom" id="nom" size="50" class="form-control
                            <% if ((errors != null) && errors.get("nom").isEmpty()) {
                                            out.print("error-input");
                                        }
@@ -34,8 +33,8 @@
                            " value="<%= errors == null ? "" : errors.get("nom")%>" /></td>
             </tr>
             <tr>
-                <td><label for="prenom"><strong>Prénom : </strong></label></td>
-                <td><input type="text" name="prenom" id="prenom" size="50" class="medium-input
+                <td><label for="prenom"><strong>Prénom</strong></label></td>
+                <td><input type="text" name="prenom" id="prenom" size="50" class="form-control
                            <% if ((errors != null) && errors.get("prenom").isEmpty()) {
                                            out.print("error-input");
                                        }
@@ -43,8 +42,8 @@
                            " value="<%= errors == null ? "" : errors.get("prenom")%>" /></td>
             </tr>
             <tr>
-                <td><label for="email"><strong>Email : </strong></label></td>
-                <td><input type="text" name="email" id="email" size="50" class="medium-input
+                <td><label for="email"><strong>Email</strong></label></td>
+                <td><input type="text" name="email" id="email" size="50" class="form-control
                            <% if ((errors != null) && errors.get("email").isEmpty()) {
                                            out.print("error-input");
                                        }
@@ -52,8 +51,8 @@
                            " value="<%= errors == null ? "" : errors.get("email")%>" /></td>
             </tr>
             <tr>
-                <td><label for="password"><strong>Mot de passe : </strong></label></td>
-                <td><input type="password" name="password" id="password" size="50" class="medium-input
+                <td><label for="password"><strong>Mot de passe</strong></label></td>
+                <td><input type="password" name="password" id="password" size="50" class="form-control
                            <% if ((errors != null) && errors.get("password").isEmpty()) {
                                            out.print("error-input");
                                        }
@@ -61,8 +60,8 @@
                            " value="<%= errors == null ? "" : errors.get("password")%>" /></td>
             </tr>
             <tr>
-                <td><label for="password2"><strong>Vérification du mot de passe : </strong></label></td>
-                <td><input type="password" name="password2" id="password2" size="50" class="medium-input
+                <td><label for="password2"><strong>Vérification du mot de passe</strong></label></td>
+                <td><input type="password" name="password2" id="password2" size="50" class="form-control
                            <% if ((errors != null) && errors.get("passwordVerification").isEmpty()) {
                                            out.print("error-input");
                                        }
@@ -70,9 +69,9 @@
                            " value="<%= errors == null ? "" : errors.get("passwordVerification")%>" /></td>
             </tr>
             <tr>
-                <td><label for="statut"><strong>Statut : </strong></label></td>
+                <td><label for="statut"><strong>Statut</strong></label></td>
                 <td>
-                    <select id="statut" name="statut" class="medium-input">
+                    <select id="statut" name="statut" class="form-control">
                         <%
                                     for (Statut statut : statuts) {
                                         out.println("<option value='" + statut.getId_statut() + "'");
@@ -88,7 +87,6 @@
                 </td>
             </tr>
         </table>
-        <input type="submit" value="Enregistrer" class="button" />
-        <a href="<%= request.getContextPath()%>/admin/users/index.html" class="button">Annuler</a>
+        <input class=" btn btn-sm btn-success" type="submit" value="Enregistrer" class="button" />
+        <a class="btn btn-xs btn-danger" href="<%= request.getContextPath()%>/admin/users/index.html" class="button">Annuler</a>
     </form>
-</div>

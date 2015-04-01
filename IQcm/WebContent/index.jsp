@@ -20,7 +20,7 @@
 				</div>
 			</div>
 			<div class="row margtop">
-				<div class="col-lg-offset-3 col-lg-4">
+				<div class="col-lg-offset-3 col-lg-6">
 					<jsp:include page="scripts/login.jsp" />
 				</div>
 			</div>

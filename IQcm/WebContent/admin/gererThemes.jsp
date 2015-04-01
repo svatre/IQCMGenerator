@@ -4,7 +4,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<h4 class="margleft brownBold">Gérer les thèmes des questionnaires</h4>
+<h4 class="margleft brownBold margbott2">Gérer les thèmes des questionnaires</h4>
 <jsp:include page="/scripts/errorViewHelper.jsp" />
 
 <%
