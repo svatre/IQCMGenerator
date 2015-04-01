@@ -16,17 +16,45 @@
 	font-style: italic;
 }
 
-.btn_menu {
+.btn_menuAdmin {
 	width:150px;
 }
 
-.btn_menu a {
+.btn_menuAdmin a {
 	color: brown;
 	font-weight: bold;
 	font-size: 14px;
 }
 
-.btn_menu a:hover {
+.btn_menuAdmin a:hover {
+	text-decoration: none;
+}
+
+.btn_menuEnsei {
+	width:210px;
+}
+
+.btn_menuEnsei a {
+	color: brown;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.btn_menuEnsei a:hover {
+	text-decoration: none;
+}
+
+.btn_menuEtud {
+	width:220px;
+}
+
+.btn_menuEtud a {
+	color: brown;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.btn_menuEtud a:hover {
 	text-decoration: none;
 }
 

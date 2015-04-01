@@ -6,8 +6,8 @@
 List<Question> questionsByThemeNewQuestionnaire = (List<Question>) request.getSession().getAttribute("questionsByThemeNewQuestionnaire");
 Questionnaire newQuestionnaire = (Questionnaire) request.getSession().getAttribute("newQuestionnaire");
 %>
-<fieldset id="modifier_reponses" class="">
-    <legend>Questions du questionnaire</legend>
+<fieldset id="modifier_reponses" class="margleft">
+    <p class="margleft brownBold margbott2">Questions du questionnaire</p>
     <ul class="questions">
         <%
 	       for (Question question : newQuestionnaire.getQuestions()) {
@@ -17,31 +17,26 @@ Questionnaire newQuestionnaire = (Questionnaire) request.getSession().getAttribu
     </ul>
 </fieldset>
 
-<div class="panel_left">
+<div class="panel_left margleft">
     <%
      if (newQuestionnaire != null) {
-         out.print("<h1>Nouveau questionnaire : &laquo; " + newQuestionnaire.getLibelle() + " &raquo;</h1><br/><br/>");
+         out.print("<h4 class='margbott2'>Nouveau questionnaire &laquo; " + newQuestionnaire.getLibelle() + " &raquo; : ajout d'une question</h4>");
 	%>
-
-    <label for="question">Ajouter des questions dans votre questionnaire :</label>
-    <br/><br/>
 
     <div id="reponses">
         <form id="question_0" class="question_a_ajouter" action="<%= request.getContextPath()%>/creerQuestionnaire/ajouterReponses.html" method="post">
-            <table>
+            <table class="table table-hover">
                 <tr>
-                    <td colspan="2"><label for="libelleQuestion">Libellé de la question : </label></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><textarea id="libelleQuestion" name="libelleQuestion" cols="50" rows="5"></textarea></td>
+                    <td><label for="libelleQuestion">Libellé de la question</label></td>
+                    <td><textarea class="form-control" id="libelleQuestion" name="libelleQuestion" cols="50" rows="5"></textarea></td>
                 </tr>
                 <tr>
                     <td><label for="nbReponses">Nombre de réponses à cette question</label></td>
-                    <td><input type="text" id="nbReponses" name="nbReponses" size="3" class="medium-input" /></td>
+                    <td><input class="form-control" type="text" id="nbReponses" name="nbReponses" size="3" class="medium-input" /></td>
                 </tr>
             </table>
             <input type='hidden' name='action' value='applyToAddNewQuestion' />
-            <input class='button' type='submit' value='Ajouter les réponses' />
+            <input class='btn btn-sm btn-success margbott' type='submit' value='Ajouter les réponses' />
         </form>
         <%                           
          }
@@ -52,7 +47,7 @@ Questionnaire newQuestionnaire = (Questionnaire) request.getSession().getAttribu
 if (newQuestionnaire.getQuestions().size() > 0) {
 %>
 	<div id="terminer" class="clear">
-	    <a class="button" href="testProject/creerQuestionnaire/enregistrement.html">Enregistrer tout</a>
+	    <a  class='btn btn-sm btn-warning margleft' href="enregistrement.html">Enregistrer tout</a>
 	</div>
 <%  }
 %>

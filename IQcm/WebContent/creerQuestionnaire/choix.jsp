@@ -3,14 +3,13 @@
 <%@page import="qcm.models.Niveau" %>
 <%@page import="qcm.models.Theme" %>
 
-<div class="choice">
-    <p>Veuillez sélectionner le thème et le niveau du questionnaire que vous souhaitez ajouter dans la base de données. </p>
+    <p class="margleft brownBold margbott2">Ajouter un questionnaire</p>
     <form id="choix_questionnaire_form" action="<%= request.getContextPath()%>/creerQuestionnaire/nouveau.html" method="post" accept-charset="utf-8">
-        <table>
+        <table class="table table-hover margleft">
             <tr>
-                <td class="static"><label for="theme">Choisissez le thème : </label></td>
+                <td class="static"><label for="theme">Choisissez le thème</label></td>
                 <td>
-                    <select name="theme" id="theme" class="medium-input">
+                    <select name="theme" id="theme" class="form-control">
                         <option></option>
                         <%
                                     List<Theme> themes = (List<Theme>) request.getAttribute("themes");
@@ -25,9 +24,9 @@
                 </td>
             </tr>
             <tr>
-                <td class="static"><label for="niveau">Choisissez le niveau : </label></td>
+                <td class="static"><label for="niveau">Choisissez le niveau</label></td>
                 <td>
-                    <select name="niveau" id="niveau" class="medium-input">
+                    <select name="niveau" id="niveau" class="form-control">
                         <option></option>
                         <%
                                     List<Niveau> niveaux = (List<Niveau>) request.getAttribute("niveaux");
@@ -45,12 +44,10 @@
             <tr>
                 <td class="static"><label for="nom_questionnaire">Entrez le nom du questionnaire : </label></td>
                 <td>
-                    <input type="text" name="libelle" value="" id="nom_questionnaire" class="medium-input" />
+                    <input type="text" name="libelle" value="" id="nom_questionnaire" class="form-control" />
                 </td>
             </tr>
         </table>
         <input type="hidden" name="action" value="createQuestionnaire" />
-        <input type="submit" value="Commencer" class="button" />
+        <input class="btn btn-sm btn-primary margleft" type="submit" value="Commencer" class="button" />
     </form>
-</div>
-<div class="line"></div>

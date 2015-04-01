@@ -9,38 +9,39 @@
 %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-                <div id="navigation">
-                    <ul class="menu_gauche">
                     <% if (!user.isAdmin()) {              
                         if (user.isCreator()) {%>
-                        	<h5>Teacher</h5>
-                        	<a href="<%= request.getContextPath()%>/creerQuestionnaire/index.html"><li>Créer un questionnaire</li></a>
-                        	<a href="<%= request.getContextPath()%>/mesQuestionnaires/index.html"><li>Mes questionnaires</li></a>
+                        	<h4 class="margbott2">Enseignant</h4>
+	                        <button class="btn btn-sm btn-default btn_menuEnsei">
+	                        	<a href="<%= request.getContextPath()%>/creerQuestionnaire/index.html">Créer un questionnaire</a>
+	                        </button>
+                        	<button class="btn btn-sm btn-default btn_menuEnsei">
+	                        	<a href="<%= request.getContextPath()%>/mesQuestionnaires/index.html">Mes questionnaires</a>
+                       		</button>
                        <% }
                         else
                         {%>
-                    		<h5>Student</h5>
-                    		<a href="<%= request.getContextPath()%>/passerQuestionnaire/index.html"><li>Passer un questionnaire</li></a>
-                        	<a href="<%= request.getContextPath()%>/mesResultats/index.html"><li>Mes résultats</li></a>
-                        
+                    		<h4 class="margbott2">Etudiant</h4>
+	                        <button class="btn btn-sm btn-default btn_menuEtud">
+	                    		<a href="<%= request.getContextPath()%>/passerQuestionnaire/index.html">Passer un questionnaire</a>
+	                        </button>
+	                        <button class="btn btn-sm btn-default btn_menuEtud">	
+	                        	<a href="<%= request.getContextPath()%>/mesResultats/index.html">Mes résultats</a>
+	                        </button>
                     	<%}
                        }%>
-                    </ul>
                     <%if (user.isAdmin()) {%>
-                    <ul class="menu_gauche right">
                     	<h4 class="margbott2">Administrateur</h4>
-                        <button class="btn btn-sm btn-default btn_menu">
+                        <button class="btn btn-sm btn-default btn_menuAdmin">
                         	<a href="<%= request.getContextPath()%>/admin/themes/index.html">Thèmes</a>
                         </button>
-                        <button class="btn btn-sm btn-default btn_menu">
+                        <button class="btn btn-sm btn-default btn_menuAdmin">
 	                        <a href="<%= request.getContextPath()%>/admin/niveaux/index.html">Niveau</a>
 	                     </button>
-	                     <button class="btn btn-sm btn-default btn_menu">   
+	                     <button class="btn btn-sm btn-default btn_menuAdmin">   
 	                        <a href="<%= request.getContextPath()%>/admin/questionnaires/index.html">Questionnaires</a>
 	                     </button>
-	                     <button class="btn btn-sm btn-default btn_menu">  
+	                     <button class="btn btn-sm btn-default btn_menuAdmin">  
 	                        <a href="<%= request.getContextPath()%>/admin/users/index.html">Utilisateurs</a>
                     	</button>
-                    </ul>
                     <% }%>
-                </div>
