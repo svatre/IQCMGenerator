@@ -14,7 +14,6 @@
     <thead>
         <tr>
 	        <th>Libellé</th>
-	        <th>Modifier</th>
 	        <th>Activité</th>
 	        <th>Contrôle</th>
         </tr>
@@ -26,15 +25,6 @@
     <tbody>
 	    <tr>
 	        <td><%= questionnaire.getLibelle()%></td>
-	        <td class="centered">
-	            <%
-	                                                        if (questionnaire.estPasse()) {
-	                                                            out.println("Oui");
-	                                                        } else {
-	                                                            out.println("Non");
-	                                                        }
-	            %>
-	        </td>
 	        <td class="centered">
 	            <%
 	                                                        if (questionnaire.estActif()) {

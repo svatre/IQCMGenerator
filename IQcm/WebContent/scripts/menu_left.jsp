@@ -36,7 +36,7 @@
                         	<a href="<%= request.getContextPath()%>/admin/themes/index.html">Thèmes</a>
                         </button>
                         <button class="btn btn-sm btn-default btn_menuAdmin">
-	                        <a href="<%= request.getContextPath()%>/admin/niveaux/index.html">Niveau</a>
+	                        <a href="<%= request.getContextPath()%>/admin/niveaux/index.html">Niveaux</a>
 	                     </button>
 	                     <button class="btn btn-sm btn-default btn_menuAdmin">   
 	                        <a href="<%= request.getContextPath()%>/admin/questionnaires/index.html">Questionnaires</a>
