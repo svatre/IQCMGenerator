@@ -3,8 +3,8 @@ package qcm.models;
 import java.sql.Date;
 
 /**
- * Classe qui dÃ©finit un questionnaire passÃ© par un utilisateur (et finit)
- * pour ensuite Ãªtre enregistrer en base de donnÃ©es
+ * Classe qui dfinit un questionnaire pass par un utilisateur (et finit)
+ * pour ensuite tre enregistrer en base de donnes
  */
 public class QuestionnairePasse {
 

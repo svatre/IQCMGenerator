@@ -252,8 +252,8 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 SET AUTOCOMMIT=0;
 USE `QCM`;
-INSERT INTO `QCM`.`niveau` (`id_niveau`, `libelle`, `est_actif`) VALUES (1, 'D√©butant', 1);
-INSERT INTO `QCM`.`niveau` (`id_niveau`, `libelle`, `est_actif`) VALUES (2, 'Avanc√©', 1);
+INSERT INTO `QCM`.`niveau` (`id_niveau`, `libelle`, `est_actif`) VALUES (1, 'Débutant', 1);
+INSERT INTO `QCM`.`niveau` (`id_niveau`, `libelle`, `est_actif`) VALUES (2, 'Avancé', 1);
 INSERT INTO `QCM`.`niveau` (`id_niveau`, `libelle`, `est_actif`) VALUES (3, 'Expert', 1);
 INSERT INTO `QCM`.`niveau` (`id_niveau`, `libelle`, `est_actif`) VALUES (4, 'Super ninja de la programmation', 1);
 
@@ -283,7 +283,7 @@ insert into `QCM`.`user` (`id_user`, `login`, `nom`, `prenom`, `password`, `emai
 insert into `QCM`.`user` (`id_user`, `login`, `nom`, `prenom`, `password`, `email`, `est_actif`, `id_statut`) values (6, 'tridene', 'Ridene', 'Taha', 'tridene', 'tridene@parisdescartes.fr', 1, 1);
 insert into `QCM`.`user` (`id_user`, `login`, `nom`, `prenom`, `password`, `email`, `est_actif`, `id_statut`) values (7, 'mgiry', 'Giry', 'Martin', 'mgiry', 'mgiry@parisdescartes.fr', 1, 1);
 insert into `QCM`.`user` (`id_user`, `login`, `nom`, `prenom`, `password`, `email`, `est_actif`, `id_statut`) values (8, 'mschwartz', 'Schwartz', 'Michael', 'mschwartz', 'mschwartz@parisdescartes.fr', 1, 2);
-insert into `QCM`.`user` (`id_user`, `login`, `nom`, `prenom`, `password`, `email`, `est_actif`, `id_statut`) values (9, 'gyakan', 'Yakan', 'Gr√©goire', 'gyakan', 'gyakan@parisdescartes.fr', 1, 2);
+insert into `QCM`.`user` (`id_user`, `login`, `nom`, `prenom`, `password`, `email`, `est_actif`, `id_statut`) values (9, 'gyakan', 'Yakan', 'Grégoire', 'gyakan', 'gyakan@parisdescartes.fr', 1, 2);
 insert into `QCM`.`user` (`id_user`, `login`, `nom`, `prenom`, `password`, `email`, `est_actif`, `id_statut`) values (10, 'dtaing', 'Taing', 'David', 'dtaing', 'dtaing@parisdescartes.fr', 1, 2);
 
 COMMIT;
@@ -298,7 +298,7 @@ insert into `QCM`.`theme` (`id_theme`, `libelle`, `est_actif`, `id_user`) values
 insert into `QCM`.`theme` (`id_theme`, `libelle`, `est_actif`, `id_user`) values (3, 'C++', 1, 1);
 insert into `QCM`.`theme` (`id_theme`, `libelle`, `est_actif`, `id_user`) values (4, 'PHP', 1, 1);
 insert into `QCM`.`theme` (`id_theme`, `libelle`, `est_actif`, `id_user`) values (5, 'Unified Modeling Language', 1, 1);
-insert into `QCM`.`theme` (`id_theme`, `libelle`, `est_actif`, `id_user`) values (6, 'Programmation Orient√©e Objet', 1, 1);
+insert into `QCM`.`theme` (`id_theme`, `libelle`, `est_actif`, `id_user`) values (6, 'Programmation Orientée Objet', 1, 1);
 
 COMMIT;
 
@@ -308,7 +308,7 @@ COMMIT;
 SET AUTOCOMMIT=0;
 USE `QCM`;
 insert into `QCM`.`questionnaire` (`id_questionnaire`, `libelle`, `date_creation`, `limite_temps`, `est_actif`, `id_niveau`, `id_theme`, `id_user`) values (1, 'Les exceptions en Java', NOW(), 30, true, 1, 1, 1);
-insert into `QCM`.`questionnaire` (`id_questionnaire`, `libelle`, `date_creation`, `limite_temps`, `est_actif`, `id_niveau`, `id_theme`, `id_user`) values (2, 'L\'h√©ritage en Ruby', NOW(), 20, true, 2, 2, 1);
+insert into `QCM`.`questionnaire` (`id_questionnaire`, `libelle`, `date_creation`, `limite_temps`, `est_actif`, `id_niveau`, `id_theme`, `id_user`) values (2, 'L\'héritage en Ruby', NOW(), 20, true, 2, 2, 1);
 insert into `QCM`.`questionnaire` (`id_questionnaire`, `libelle`, `date_creation`, `limite_temps`, `est_actif`, `id_niveau`, `id_theme`, `id_user`) values (3, 'Le polymorphisme en C++', NOW(), 45, true, 1, 3, 2);
 insert into `QCM`.`questionnaire` (`id_questionnaire`, `libelle`, `date_creation`, `limite_temps`, `est_actif`, `id_niveau`, `id_theme`, `id_user`) values (4, 'Test', NOW(), 45, true, 1, 4, 2);
 
@@ -348,23 +348,23 @@ COMMIT;
 -- -----------------------------------------------------
 SET AUTOCOMMIT=0;
 USE `QCM`;
-insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (1, 'R√©ponse 1', 'Descriptif R√©ponse 1 Question 1', 0, 0, 1);
-insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (2, 'R√©ponse 2', 'Descriptif R√©ponse 2 Question 1', 0, 0, 1);
-insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (3, 'R√©ponse 3', 'Descriptif R√©ponse 3 Question 1', 1, 5, 1);
-insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (4, 'R√©ponse 4', 'Descriptif R√©ponse 4 Question 1', 0, 0, 1);
-insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (5, 'R√©ponse 1', 'Descriptif R√©ponse 1 Question 2', 0, 0, 2);
-insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (6, 'R√©ponse 2', 'Descriptif R√©ponse 2 Question 2', 1, 3, 2);
-insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (7, 'R√©ponse 3', 'Descriptif R√©ponse 3 Question 2', 0, 0, 2);
-insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (8, 'R√©ponse 4', 'Descriptif R√©ponse 4 Question 2', 1, 3, 2);
-insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (9, 'R√©ponse 5', 'Descriptif R√©ponse 5 Question 2', 0, 0, 2);
-insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (10, 'R√©ponse 1', 'Descriptif R√©ponse 1 Question 3', 0, 0, 3);
-insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (11, 'R√©ponse 2', 'Descriptif R√©ponse 2 Question 3', 1, 9, 3);
-insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (12, 'R√©ponse 3', 'Descriptif R√©ponse 3 Question 3', 0, 0, 3);
-insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (13, 'R√©ponse 1', 'Descriptif R√©ponse 1 Question 21', 0, 0, 21);
-insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (14, 'R√©ponse 2', 'Descriptif R√©ponse 2 Question 21', 1, 3, 21);
-insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (15, 'R√©ponse 3', 'Descriptif R√©ponse 3 Question 21', 1, 3, 21);
-insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (16, 'R√©ponse 4', 'Descriptif R√©ponse 4 Question 21', 0, 0, 21);
-insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (17, 'R√©ponse 5', 'Descriptif R√©ponse 5 Question 21', 0, 0, 21);
+insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (1, 'Réponse 1', 'Descriptif Réponse 1 Question 1', 0, 0, 1);
+insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (2, 'Réponse 2', 'Descriptif Réponse 2 Question 1', 0, 0, 1);
+insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (3, 'Réponse 3', 'Descriptif Réponse 3 Question 1', 1, 5, 1);
+insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (4, 'Réponse 4', 'Descriptif Réponse 4 Question 1', 0, 0, 1);
+insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (5, 'Réponse 1', 'Descriptif Réponse 1 Question 2', 0, 0, 2);
+insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (6, 'Réponse 2', 'Descriptif Réponse 2 Question 2', 1, 3, 2);
+insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (7, 'Réponse 3', 'Descriptif Réponse 3 Question 2', 0, 0, 2);
+insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (8, 'Réponse 4', 'Descriptif Réponse 4 Question 2', 1, 3, 2);
+insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (9, 'Réponse 5', 'Descriptif Réponse 5 Question 2', 0, 0, 2);
+insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (10, 'Réponse 1', 'Descriptif Réponse 1 Question 3', 0, 0, 3);
+insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (11, 'Réponse 2', 'Descriptif Réponse 2 Question 3', 1, 9, 3);
+insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (12, 'Réponse 3', 'Descriptif Réponse 3 Question 3', 0, 0, 3);
+insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (13, 'Réponse 1', 'Descriptif Réponse 1 Question 21', 0, 0, 21);
+insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (14, 'Réponse 2', 'Descriptif Réponse 2 Question 21', 1, 3, 21);
+insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (15, 'Réponse 3', 'Descriptif Réponse 3 Question 21', 1, 3, 21);
+insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (16, 'Réponse 4', 'Descriptif Réponse 4 Question 21', 0, 0, 21);
+insert into `QCM`.`reponse` (`id_reponse`, `libelle`, `descriptif`, `est_correcte`, `note`, `id_question`) values (17, 'Réponse 5', 'Descriptif Réponse 5 Question 21', 0, 0, 21);
 
 COMMIT;
 

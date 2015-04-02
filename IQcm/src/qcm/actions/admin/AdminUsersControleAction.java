@@ -15,18 +15,18 @@ public class AdminUsersControleAction extends AdminAction {
         Integer idUser = Integer.parseInt(request.getParameter("id"));
         if (idUser != null && idUser >= 0) {
             if (ActionHelper.getIdUser(request) == idUser) {
-                throw new UnauthorizedActionException("Vous n'avez pas le droit de d√©sactiver votre propre compte.");
+                throw new UnauthorizedActionException("Vous n'avez pas le droit de désactiver votre propre compte.");
             }
 
             User user = UserDAO.getById(idUser);
             Boolean estActif = Boolean.parseBoolean(request.getParameter("est_actif"));
             user.setEstActif(estActif);
             UserDAO.update(user);
-            String message = "Le compte utilisateur de <strong>" + user.getNom() + " " + user.getPrenom() + "</strong> a √©t√© ";
+            String message = "Le compte utilisateur de <strong>" + user.getNom() + " " + user.getPrenom() + "</strong> a été ";
             if (estActif) {
-                message += "activ√©";
+                message += "activé";
             } else {
-                message += "d√©sactiv√©";
+                message += "désactivé";
             }
             request.setAttribute("message", message);
         } else {

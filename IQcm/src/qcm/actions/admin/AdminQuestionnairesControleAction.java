@@ -15,11 +15,11 @@ public class AdminQuestionnairesControleAction extends AdminAction {
             Questionnaire q = QuestionnaireDAO.getById(idQuestionnaire);
             q.setEstActif(estActif);
             QuestionnaireDAO.update(q);
-            String message = "Le questionnaire <strong>" + q.getLibelle() + "</strong> a √©t√© ";
+            String message = "Le questionnaire <strong>" + q.getLibelle() + "</strong> a été ";
             if (estActif) {
-                message += "activ√©";
+                message += "activé";
             } else {
-                message += "d√©sactiv√©";
+                message += "désactivé";
             }
             request.setAttribute("message", message);
         } else {

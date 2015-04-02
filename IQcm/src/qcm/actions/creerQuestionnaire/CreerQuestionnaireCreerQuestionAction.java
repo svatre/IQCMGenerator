@@ -20,21 +20,21 @@ public class CreerQuestionnaireCreerQuestionAction extends EnseignantAction{
     public void execute() throws Exception {
         String libelleQuestion = (String) request.getParameter("libelleQuestion");
         if (libelleQuestion == null || libelleQuestion.trim().isEmpty()) {
-            throw new UnauthorizedActionException("Merci d'entrer le libell√© de votre question");
+            throw new UnauthorizedActionException("Merci d'entrer le libellé de votre question");
         } else if (request.getParameter("nbReponses") == null) {
-            throw new UnauthorizedActionException("Le nombre de r√©ponses ne correspond pas √† ce qui est attendu");
+            throw new UnauthorizedActionException("Le nombre de réponses ne correspond pas √† ce qui est attendu");
         }
         int nbReponses = Integer.parseInt(request.getParameter("nbReponses"));
         if (nbReponses <= 0) {
-            throw new UnauthorizedActionException("Le nombre de r√©ponses ne correspond pas √† ce qui est attendu");
+            throw new UnauthorizedActionException("Le nombre de réponses ne correspond pas √† ce qui est attendu");
         }
         Questionnaire newQuestionnaire = (Questionnaire) request.getSession().getAttribute("newQuestionnaire");
         Question nouvelleQuestion = new Question(null, libelleQuestion, newQuestionnaire.getIdTheme(), ActionHelper.getIdUser(request), 0, new ArrayList<Reponse>());
         if (newQuestionnaire.getQuestions().contains(nouvelleQuestion)) {
-            throw new UnauthorizedActionException("Cette question existe d√©j√† pour ce questionnaire");
+            throw new UnauthorizedActionException("Cette question existe déj√† pour ce questionnaire");
         }
         if(QuestionDAO.search(nouvelleQuestion) != null){
-            throw new UnauthorizedActionException("Une question du m√™me libelle et du m√™me th√®me existe d√©j√†");
+            throw new UnauthorizedActionException("Une question du même libelle et du même th√®me existe déj√†");
         }
         String libelleReponse = null;
         String descriptifReponse = null;
@@ -46,14 +46,14 @@ public class CreerQuestionnaireCreerQuestionAction extends EnseignantAction{
             descriptifReponse = (String) request.getParameter("descriptifReponse_" + i);
             noteReponse = Integer.parseInt(request.getParameter("noteReponse_" + i ));
             if(noteReponse == null){
-                throw new UnauthorizedActionException("Merci de sp√©cifier chaque note pour chaque r√©ponse");
+                throw new UnauthorizedActionException("Merci de spécifier chaque note pour chaque réponse");
             }
             estCorrecte = request.getParameterValues("estCorrecteReponse_" + i) != null ;
             nouvelleQuestion.getReponses().add(new Reponse(null, libelleReponse, descriptifReponse, estCorrecte, noteReponse, null));
             existeEstCorecte = existeEstCorecte || estCorrecte;
         }
         if(!existeEstCorecte){
-            throw new UnauthorizedActionException("Merci de sp√©cifier au moins une bonne r√©ponse");
+            throw new UnauthorizedActionException("Merci de spécifier au moins une bonne réponse");
         }
         newQuestionnaire.addQuestion(nouvelleQuestion);
         request.getSession().setAttribute("newQuestionnaire" , newQuestionnaire);

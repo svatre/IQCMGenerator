@@ -10,7 +10,7 @@ import java.util.Map;
 import qcm.models.Qcm;
 
 /**
- * Gère les accès à la base de données pour les QCM
+ * Gère les accès à la base de donn�es pour les QCM
  * @author Ingesup
  * TODO : Changer limite_temps à celui du qcm
  */

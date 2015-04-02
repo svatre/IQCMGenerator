@@ -17,11 +17,11 @@ public class CreerQuestionnaireNouveauAction extends EnseignantAction{
        String libelle = request.getParameter("libelle").toString();
 
         if (request.getParameter("theme") == null || request.getParameter("theme").toString().trim().isEmpty()) {
-            throw new UnauthorizedActionException("Merci de sp√©cifier le th√®me de votre questionnaire");
+            throw new UnauthorizedActionException("Merci de spécifier le th√®me de votre questionnaire");
         } else if (request.getParameter("niveau") == null || request.getParameter("niveau").toString().trim().isEmpty()) {
-            throw new UnauthorizedActionException("Merci de sp√©cifier le niveau");
+            throw new UnauthorizedActionException("Merci de spécifier le niveau");
         } else if (libelle.trim().isEmpty()) {
-            new UnauthorizedActionException("Merci de sp√©cifier le libelle de votre questionnaire");
+            new UnauthorizedActionException("Merci de spécifier le libelle de votre questionnaire");
         }
         int idTheme = Integer.parseInt(request.getParameter("theme"));
         int idNiveau = Integer.parseInt(request.getParameter("niveau"));

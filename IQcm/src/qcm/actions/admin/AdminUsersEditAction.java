@@ -36,7 +36,7 @@ public class AdminUsersEditAction extends AdminAction {
                         user.setEmail(email);
                         user.setPassword(password);
                         UserDAO.update(user);
-                        request.setAttribute("message", "La modification de l'utilisateur s'est d√©roul√©e correctement.");
+                        request.setAttribute("message", "La modification de l'utilisateur s'est déroulée correctement.");
                     }
                     HashMap<Integer, User> users = UserDAO.getAll();
                     request.setAttribute("users", users);

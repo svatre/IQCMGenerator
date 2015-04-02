@@ -17,7 +17,7 @@ import qcm.persistences.ThemeDAO;
 import qcm.persistences.UserDAO;
 
 /**
- * Ensemble de m√©thodes qui sont r√©guli√®rement appel√©es dans l'application
+ * Ensemble de méthodes qui sont réguli√®rement appelées dans l'application
  * @author Ingesup
  */
 public class ActionHelper {

@@ -11,7 +11,7 @@ import qcm.persistences.QuestionnaireDAO;
 import qcm.persistences.ReponseDAO;
 
 /**
- * Ensemble de m√©thodes qui sont appel√©es souvent
+ * Ensemble de méthodes qui sont appelées souvent
  * @author Ingesup
  */
 public class Helper {

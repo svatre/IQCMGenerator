@@ -16,9 +16,9 @@ import qcm.models.Reponse;
 public class QuestionnaireDAO extends ModeleDAO {
 
     /**
-     * R√©cup√®re le questionnaire dont on conna√Æt l'identifiant en base de donn√©es
+     * Récup√®re le questionnaire dont on conna√Æt l'identifiant en base de données
      * @param idQuestionnaire L'identifiant du questionnaire
-     * @return Le questionnaire identifi√© par idQuestionnaire
+     * @return Le questionnaire identifié par idQuestionnaire
      * @throws SQLException
      */
     public static Questionnaire getById(int idQuestionnaire) throws SQLException {
@@ -45,9 +45,9 @@ public class QuestionnaireDAO extends ModeleDAO {
     }
 
     /**
-     * R√©cup√©rer la liste de toutes les questions relatives √† un questionnaire
+     * Récupérer la liste de toutes les questions relatives √† un questionnaire
      * @param idQuestionnaire L'identifiant du questionnaire dont on veut les questions
-     * @return La liste des questions incluses dans le questionnaire sp√©cifi√© en param√®tre
+     * @return La liste des questions incluses dans le questionnaire spécifié en param√®tre
      * @throws SQLException
      */
     public static ArrayList<Question> getQuestionsById(int idQuestionnaire) throws SQLException {
@@ -67,9 +67,9 @@ public class QuestionnaireDAO extends ModeleDAO {
     }
 
     /**
-     * R√©cup√©rer tous les questionnaires d'un th√®me donn√©
-     * @param idTheme L'identifiant du th√®me concern√©
-     * @return La liste de tous les questionnaires dont le th√®me est pass√© en argument
+     * Récupérer tous les questionnaires d'un th√®me donné
+     * @param idTheme L'identifiant du th√®me concerné
+     * @return La liste de tous les questionnaires dont le th√®me est passé en argument
      * @throws SQLException
      */
     public static HashMap<Integer, String> getQuestionnairesByTheme(int idTheme) throws SQLException {
@@ -85,9 +85,9 @@ public class QuestionnaireDAO extends ModeleDAO {
     }
 
     /**
-     * R√©cup√©rer tous les questionnaires d'un niveau donn√©
-     * @param idNiveau L'identifiant du niveau concern√©
-     * @return La liste de tous les questionnaires dont le niveau est pass√© en argument
+     * Récupérer tous les questionnaires d'un niveau donné
+     * @param idNiveau L'identifiant du niveau concerné
+     * @return La liste de tous les questionnaires dont le niveau est passé en argument
      * @throws SQLException
      */
     public static HashMap<Integer, String> getQuestionnairesByNiveau(int idNiveau) throws SQLException {
@@ -102,10 +102,10 @@ public class QuestionnaireDAO extends ModeleDAO {
     }
 
     /**
-     * R√©cup√©rer tous les questionnaires pour un niveau et un th√®me sp√©cifi√©s
-     * @param idTheme L'identifiant du th√®me concern√©
-     * @param idNiveau L'identifiant du niveau concern√©
-     * @return La liste de tous les questionnaires dont le th√®me et le niveau sont pass√©s en argument
+     * Récupérer tous les questionnaires pour un niveau et un th√®me spécifiés
+     * @param idTheme L'identifiant du th√®me concerné
+     * @param idNiveau L'identifiant du niveau concerné
+     * @return La liste de tous les questionnaires dont le th√®me et le niveau sont passés en argument
      * @throws SQLException
      */
     public static HashMap<Integer, String> getQuestionnairesByThemeAndNiveau(int idTheme, int idNiveau) throws SQLException {
@@ -127,12 +127,12 @@ public class QuestionnaireDAO extends ModeleDAO {
     }
 
     /**
-     * Recherche dans la base donn√©es un questionnaire qui a comme th√®me idTheme, comme niveau idNiveau,
+     * Recherche dans la base données un questionnaire qui a comme th√®me idTheme, comme niveau idNiveau,
      * et comme libelle libelle
      * @param idTheme
      * @param idNiveau
      * @param libelle
-     * @return un questionnaire si la recherche a r√©ussi, null sinon
+     * @return un questionnaire si la recherche a réussi, null sinon
      * @throws java.sql.SQLException
      */
     public static Questionnaire search(final int idTheme, final int idNiveau, final String libelle) throws SQLException {

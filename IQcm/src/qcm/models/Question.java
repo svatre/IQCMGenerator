@@ -4,10 +4,10 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * Une question est cr√©√©e par un utilisateur et peut faire partie d'un
+ * Une question est créée par un utilisateur et peut faire partie d'un
  * questionnaire (qui est une liste de question). Une question doit avoir au
- * moins une r√©ponse (qui sont contenues elles aussi dans une liste). Cette
- * question est rattach√©e √† un th√®me et √† un libell√© (qui serait par exemple:
+ * moins une réponse (qui sont contenues elles aussi dans une liste). Cette
+ * question est rattachée √† un th√®me et √† un libellé (qui serait par exemple:
  * <em>"Quelle est la couleur du cheval blanc d'Henri IV ?"</em>).
  * @author Ingesup
  */
@@ -29,8 +29,8 @@ public class Question {
      */
     public Question(final Integer idQuestion, final String libelle,
             final int idTheme, final int idUser, final int nbQuestionnairePasseAppelant, List<Reponse> reponses) {
-        assert idQuestion == null || idQuestion >= 0 : "idQuestion doit √™tre non n√©gatif (re√ßu: " + idQuestion + ")";
-        assert libelle != null && libelle.trim().isEmpty() : "le libell√© ne doit √™tre ni null ni vide";
+        assert idQuestion == null || idQuestion >= 0 : "idQuestion doit être non négatif (id: " + idQuestion + ")";
+        assert libelle != null && libelle.trim().isEmpty() : "le libellé ne doit être ni null ni vide";
         this.idQuestion = idQuestion;
         this.libelle = libelle;
         this.idTheme = idTheme;
@@ -59,7 +59,7 @@ public class Question {
     }
 
     public void setIdQuestion(final int idQuestion) {
-        assert idQuestion > 0 : "Le num√©ro de la question doit √™tre positif";
+        assert idQuestion > 0 : "Le numéro de la question doit être positif";
         this.idQuestion = idQuestion;
         assert invariant();
     }
@@ -69,7 +69,7 @@ public class Question {
     }
 
     public void setIdTheme(final int idTheme) {
-        assert idTheme > 0 : "L'identifiant du th√®me doit √™tre positif";
+        assert idTheme > 0 : "L'identifiant du th√®me doit être positif";
         this.idTheme = idTheme;
         assert invariant();
     }
@@ -79,7 +79,7 @@ public class Question {
     }
 
     public void setIdUser(final int idUser) {
-        assert idUser > 0 : "L'identifiant de l'utilisateur doit √™tre positif";
+        assert idUser > 0 : "L'identifiant de l'utilisateur doit être positif";
         this.idUser = idUser;
         assert invariant();
     }
@@ -89,7 +89,7 @@ public class Question {
     }
 
     public void setLibelle(final String libelle) {
-        assert libelle != null && !libelle.trim().isEmpty() : "le libell√© ne doit √™tre ni null ni vide";
+        assert libelle != null && !libelle.trim().isEmpty() : "le libellé ne doit être ni null ni vide";
         this.libelle = libelle;
         assert invariant();
     }
@@ -124,8 +124,8 @@ public class Question {
 
     /**
      * reponse non null
-     * reponse n'existe pas deja dans la liste des r√©ponses pour cette question
-     * la question doit √™tre modifiable
+     * reponse n'existe pas deja dans la liste des réponses pour cette question
+     * la question doit être modifiable
      * @param reponses
      */
     public void addReponse(Reponse reponse) {
@@ -138,8 +138,8 @@ public class Question {
     }
 
     /**
-     * Indique si la question a plusieurs r√©ponses
-     * @return true si plusieurs r√©ponses, false sinon
+     * Indique si la question a plusieurs réponses
+     * @return true si plusieurs réponses, false sinon
      */
     public boolean hasMultipleResponse() {
         return (reponses.size() > 1);
@@ -175,9 +175,9 @@ public class Question {
     }
 
     protected boolean invariant() {
-        assert getIdQuestion() > 0 : "Le num√©ro de la question doit √™tre positif";
-        assert getIdUser() > 0 : "L'identifiant de l'utilisateur doit √™tre positif";
-        assert getLibelle() != null && !getLibelle().trim().isEmpty() : "le libell√© ne doit √™tre ni null ni vide";
+        assert getIdQuestion() > 0 : "Le numéro de la question doit être positif";
+        assert getIdUser() > 0 : "L'identifiant de l'utilisateur doit être positif";
+        assert getLibelle() != null && !getLibelle().trim().isEmpty() : "le libellé ne doit être ni null ni vide";
         return true;
     }
 }

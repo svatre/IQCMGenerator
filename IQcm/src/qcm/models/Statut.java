@@ -1,7 +1,7 @@
 package qcm.models;
 
 /**
- * DÃ©finit le statut d'un utilisateur
+ * Dfinit le statut d'un utilisateur
  */
 public class Statut {
 

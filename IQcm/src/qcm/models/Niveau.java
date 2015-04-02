@@ -9,7 +9,7 @@ public class Niveau {
 
     public Niveau(int idNiveau, String libelle, int utilisations, boolean estActif) {
         assert idNiveau > 0;
-        assert libelle != null && !libelle.trim().isEmpty() : "Le Libelle ne doit Ãªtre ni null ni vide";
+        assert libelle != null && !libelle.trim().isEmpty() : "Le Libelle ne doit tre ni null ni vide";
 
         this.idNiveau = idNiveau;
         this.libelle = libelle;
@@ -33,7 +33,7 @@ public class Niveau {
     }
 
     public void setLibelle(String libelle) {
-        assert libelle != null && !libelle.trim().isEmpty() : "Le Libelle ne doit Ãªtre ni null ni vide";
+        assert libelle != null && !libelle.trim().isEmpty() : "Le Libelle ne doit tre ni null ni vide";
         this.libelle = libelle;
         assert invariant();
     }
@@ -51,7 +51,7 @@ public class Niveau {
     }
     
     protected boolean invariant() {
-        assert getLibelle() != null && !getLibelle().trim().isEmpty() : "Le Libelle ne doit Ãªtre ni null ni vide";
+        assert getLibelle() != null && !getLibelle().trim().isEmpty() : "Le Libelle ne doit tre ni null ni vide";
         assert getIdNiveau() > 0;
         return true;
     }

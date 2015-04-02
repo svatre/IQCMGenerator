@@ -22,7 +22,7 @@ public class AdminThemesEditAction extends AdminAction {
                     Theme theme = ThemeDAO.getById(idTheme);
                     theme.setLibelle(libelle);
                     ThemeDAO.update(theme);
-                    request.setAttribute("message", "La modification du thème s'est déroulée correctement.");
+                    request.setAttribute("message", "La modification du thème s'est d�roul�e correctement.");
                 }
                 ActionHelper.setAttributeThemes(request);
                 setView("/admin/gererThemes.jsp");
