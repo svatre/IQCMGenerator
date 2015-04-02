@@ -14,7 +14,7 @@ public class AdminUsersControleAction extends AdminAction {
     public void execute() throws SQLException, UnauthorizedActionException {
         Integer idUser = Integer.parseInt(request.getParameter("id"));
         if (idUser != null && idUser >= 0) {
-            if (ActionHelper.getIdUser(request) != idUser) {
+            if (ActionHelper.getIdUser(request) == idUser) {
                 throw new UnauthorizedActionException("Vous n'avez pas le droit de désactiver votre propre compte.");
             }
 
