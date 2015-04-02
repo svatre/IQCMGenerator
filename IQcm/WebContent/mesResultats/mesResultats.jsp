@@ -29,7 +29,7 @@
     }
     out.println("</table>");
 } else {
-    out.println("Vous n'avez encore passé aucun questionnaire.");
+    out.println("<p class='margleft'>Vous n'avez encore passé aucun questionnaire.</p>");
 }
 %>
                 

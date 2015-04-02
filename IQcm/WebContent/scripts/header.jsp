@@ -14,8 +14,6 @@
 <div class="row">
 	<div class="col-lg-12 head">
 		<h1><a class="qcm" href="<%= request.getContextPath() %>">QCM Generator</a></h1>
-			<p class="right">
-				Bienvenue <%= user.getPrenom()%> <%= user.getNom()%>, <a class="white" href="<%= request.getContextPath()%>/logout.html">Déconnexion</a>
-			</p>
+			
 	</div>
 </div>

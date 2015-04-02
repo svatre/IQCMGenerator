@@ -7,7 +7,7 @@
             Integer niveau = (Integer) request.getAttribute("niveau");
 %>
 
-
+<h4 id="liste_questionnaires" class="margleft brownBold margbott2">Passer un questionnaire</h4>
     <form id="choix_questionnaire_form" action="<%= request.getContextPath() %>/passerQuestionnaire/listeQuestionnaires.html" method="post" accept-charset="utf-8">
 
         <table class="table table-bordered table-hover margleft margtop2">
@@ -56,7 +56,7 @@
         <input type="hidden" name="action" value="choixQuestionnaire"/>
     </form>
 
-<h4 id="liste_questionnaires" class="margleft brownBold margbott2">Liste des questionnaires</h4>
+<p id="liste_questionnaires" class="margleft brownBold margbott2">Liste des questionnaires</p>
 <%
             Map<Integer, String> questionnaires = (Map) request.getAttribute("questionnaires");
             if (questionnaires != null) {

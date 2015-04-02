@@ -18,7 +18,7 @@
         <div class="container">
             <jsp:include page="scripts/header.jsp" />
             <div class="row margtop">
-            	<div class="col-lg-2">
+            	<div class="col-lg-2" style="text-align:center">
                 	<jsp:include page="scripts/menu_left.jsp" />
             	</div>
                 <div class="col-lg-10">

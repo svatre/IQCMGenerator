@@ -3,7 +3,7 @@
 <%@page import="qcm.models.Niveau" %>
 <%@page import="qcm.models.Theme" %>
 
-    <p class="margleft brownBold margbott2">Ajouter un questionnaire</p>
+    <h4 class="margleft brownBold margbott2">Ajouter un questionnaire</h4>
     <form id="choix_questionnaire_form" action="<%= request.getContextPath()%>/creerQuestionnaire/nouveau.html" method="post" accept-charset="utf-8">
         <table class="table table-hover margleft">
             <tr>
