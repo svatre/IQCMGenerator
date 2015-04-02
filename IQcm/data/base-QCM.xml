@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<dataset>
+
+    <statut id_statut = "1" libelle = "Enseignant" />
+    <statut id_statut = "2" libelle = "Etudiant" />
+    <statut id_statut = "3" libelle = "Administrateur" />
+
+
+    <niveau id_niveau = "1" libelle = "Débutant" est_actif = "1" />
+    <niveau id_niveau = "2" libelle = "Avancé" est_actif= " 1" />
+    <niveau id_niveau = "3" libelle = "Expert" est_actif= " 1" />
+    <niveau id_niveau = "4" libelle = "Super Ninja de la programmation" est_actif = "1" />
+
+
+    <user id_user = "1"  login = "Lou" nom = "Ferrand" prenom = "Lou" password = "lou" email = "ferrandlou@gmail.com" id_statut = "3" est_actif = "1" />
+    <user id_user = "2"  login = "Maria" nom = "Rabarison" prenom = "Maria" password = "maria" email = "maryarabarison@gmail.com" id_statut = "1" est_actif = "1" />
+    <user id_user = "3"  login = "Test" nom = "Test" prenom = "Test" password = "test" email = "test@test.fr" id_statut = "2" est_actif = "1" />
+    <user id_user = "4"  login = "mplasse" nom = "Plasse" prenom = "Michel" password = "mplasse" email = "mplasse@parisdescartes.fr" id_statut = "3" est_actif = "1" />
+    <user id_user = "5"  login = "cgnaho" nom = "Gnaho" prenom = "Christophe" password = "cgnaho" email = "cgnaho@parisdescartes.fr" id_statut = "3" est_actif = "1" />
+    <user id_user = "6"  login = "tridene" nom = "Ridene" prenom = "Taha" password = "tridene" email = "tridene@parisdescartes.fr" id_statut = "1" est_actif = "1" />
+    <user id_user = "7"  login = "mgiry" nom = "Giry" prenom = "Martin" password = "mgiry" email = "mgiry@parisdescartes.fr" id_statut = "1" est_actif = "1" />
+    <user id_user = "8"  login = "mschwartz" nom = "Schwartz" prenom = "Michael" password = "mschwartz" email = "mschwartz@parisdescartes.fr" id_statut = "2" est_actif = "1" />
+    <user id_user = "9"  login = "gyakan" nom = "Yakan" prenom = "Grégoire" password = "gyakan" email = "gyakan@parisdescartes.fr" id_statut = "2" est_actif = "1" />
+    <user id_user = "10" login = "dtaing" nom = "Taing" prenom = "David" password = "dtaing" email = "dtaing@parisdescartes.fr" id_statut = "2" est_actif = "1" />
+
+
+    <theme id_theme = "1" libelle = "Java" id_user = "1" est_actif = "1" />
+    <theme id_theme = "2" libelle = "Ruby" id_user = "1" est_actif = "1" />
+    <theme id_theme = "3" libelle = "C++" id_user = "1" est_actif = "1" />
+    <theme id_theme = "4" libelle = "PHP" id_user = "1" est_actif = "1" />
+    <theme id_theme = "5" libelle = "UML" id_user = "1" est_actif = "1" />
+    <theme id_theme = "6" libelle = "Programmation Orientée Objet" id_user = "1" est_actif = "1" />
+
+
+    <question id_question = "1"  libelle = "Question 1 Theme 1"  id_theme = "1" id_user = "2" />
+    <question id_question = "2"  libelle = "Question 2 Theme 1"  id_theme = "1" id_user = "2" />
+    <question id_question = "3"  libelle = "Question 3 Theme 1"  id_theme = "1" id_user = "2" />
+    <question id_question = "4"  libelle = "Question 4 Theme 1"  id_theme = "1" id_user = "2" />
+    <question id_question = "5"  libelle = "Question 5 Theme 1"  id_theme = "1" id_user = "2" />
+    <question id_question = "6"  libelle = "Question 6 Theme 1"  id_theme = "1" id_user = "2" />
+    <question id_question = "7"  libelle = "Question 7 Theme 1"  id_theme = "1" id_user = "2" />
+    <question id_question = "8"  libelle = "Question 8 Theme 1"  id_theme = "1" id_user = "2" />
+    <question id_question = "9"  libelle = "Question 9 Theme 1"  id_theme = "1" id_user = "2" />
+    <question id_question = "10" libelle = "Question 10 Theme 1" id_theme = "1" id_user = "2" />
+    <question id_question = "11" libelle = "Question 11 Theme 2" id_theme = "2" id_user = "1" />
+    <question id_question = "12" libelle = "Question 12 Theme 2" id_theme = "2" id_user = "1" />
+    <question id_question = "13" libelle = "Question 13 Theme 2" id_theme = "2" id_user = "1" />
+    <question id_question = "14" libelle = "Question 14 Theme 2" id_theme = "2" id_user = "1" />
+    <question id_question = "15" libelle = "Question 15 Theme 2" id_theme = "2" id_user = "1" />
+    <question id_question = "16" libelle = "Question 16 Theme 2" id_theme = "2" id_user = "1" />
+    <question id_question = "17" libelle = "Question 17 Theme 2" id_theme = "2" id_user = "1" />
+    <question id_question = "18" libelle = "Question 18 Theme 2" id_theme = "2" id_user = "1" />
+    <question id_question = "19" libelle = "Question 19 Theme 2" id_theme = "2" id_user = "1" />
+    <question id_question = "20" libelle = "Question 20 Theme 2" id_theme = "2" id_user = "1" />
+    <question id_question = "21" libelle = "Question 1 Theme 4" id_theme = "4" id_user = "2" />
+	<question id_question = "22" libelle = "Les spécifications Java décrivent..."                                                                                  id_theme = "1" id_user = "4" />
+	<question id_question = "23" libelle = "A propos de Java, on prétend que..."                                                                                   id_theme = "1" id_user = "4" />
+	<question id_question = "24" libelle = "Un fichier .class contient"                                                                                            id_theme = "1" id_user = "4" />
+	<question id_question = "25" libelle = "Laquelle parmi ces proposition n'est pas une édition Java ?"                                                           id_theme = "1" id_user = "4" />
+	<question id_question = "26" libelle = "Quelle proposition relative aux bibliothèques Java standard du SDK est juste ?"                                        id_theme = "1" id_user = "4" />
+	<question id_question = "27" libelle = "Quelle API ne fait pas partie du Java SE ?"                                                                            id_theme = "1" id_user = "4" />
+	<question id_question = "28" libelle = "Les Data Sources sont une partie"                                                                                      id_theme = "1" id_user = "4" />
+	<question id_question = "29" libelle = "Un applet est"                                                                                                         id_theme = "1" id_user = "4" />
+	<question id_question = "30" libelle = "La sécurité de Java SE est basée sur le modèle Sandbox. Les composants importants de cette 'sandbox' sont..."          id_theme = "1" id_user = "4" />
+	<question id_question = "31" libelle = "Pour distribuer des applets Java, que faut-il avoir ?"                                                                 id_theme = "1" id_user = "4" />
+	<question id_question = "32" libelle = "Java Web Start..."                                                                                                     id_theme = "1" id_user = "4" />
+	<question id_question = "33" libelle = "Une interface 'pluggable look and feel' GUI pour n'importe quel système d'exploitation peut être créée à l'aide de..." id_theme = "1" id_user = "4" />
+	<question id_question = "34" libelle = "Les annotations Java peuvent être utilisées afin de..."                                                                id_theme = "1" id_user = "4" />
+	<question id_question = "35" libelle = "Un outil 'visual application builder' permet d'analyser comment fonctionnent les Java beans, en utilisant..."          id_theme = "1" id_user = "4" />
+	<question id_question = "36" libelle = "Les servlets Java sont..."                                                                                             id_theme = "1" id_user = "4" />
+	<question id_question = "37" libelle = "La compilation d'une Java Server Page (JSP) rends"                                                                     id_theme = "1" id_user = "4" />
+	<question id_question = "38" libelle = "L'architecture EJB spécification définit..."                                                                           id_theme = "1" id_user = "4" />
+	<question id_question = "39" libelle = "Quel serveur s'occupe de l'exécution des composants EJB ?"                                                             id_theme = "1" id_user = "4" />
+	<question id_question = "40" libelle = "Dans une architecture Java EE, les applications..."                                                                    id_theme = "1" id_user = "4" />
+	<question id_question = "41" libelle = "Quelle proposition n'est pas vraie à propos des spécifications Java ME ?"                                              id_theme = "1" id_user = "4" />
+
+
+    <reponse id_reponse = "1"  libelle = "Réponse 1" descriptif = "Descriptif Réponse 1 Question 1" est_correcte = "0" note = "0" id_question = "1" />
+    <reponse id_reponse = "2"  libelle = "Réponse 2" descriptif = "Descriptif Réponse 2 Question 1" est_correcte = "0" note = "0" id_question = "1" />
+    <reponse id_reponse = "3"  libelle = "Réponse 3" descriptif = "Descriptif Réponse 3 Question 1" est_correcte = "1" note = "5" id_question = "1" />
+    <reponse id_reponse = "4"  libelle = "Réponse 4" descriptif = "Descriptif Réponse 4 Question 1" est_correcte = "0" note = "0" id_question = "1" />
+    <reponse id_reponse = "5"  libelle = "Réponse 1" descriptif = "Descriptif Réponse 1 Question 2" est_correcte = "0" note = "0" id_question = "2" />
+    <reponse id_reponse = "6"  libelle = "Réponse 2" descriptif = "Descriptif Réponse 2 Question 2" est_correcte = "1" note = "3" id_question = "2" />
+    <reponse id_reponse = "7"  libelle = "Réponse 3" descriptif = "Descriptif Réponse 3 Question 2" est_correcte = "0" note = "0" id_question = "2" />
+    <reponse id_reponse = "8"  libelle = "Réponse 4" descriptif = "Descriptif Réponse 4 Question 2" est_correcte = "1" note = "3" id_question = "2" />
+    <reponse id_reponse = "9"  libelle = "Réponse 5" descriptif = "Descriptif Réponse 5 Question 2" est_correcte = "0" note = "0" id_question = "2" />
+    <reponse id_reponse = "10" libelle = "Réponse 1" descriptif = "Descriptif Réponse 1 Question 3" est_correcte = "0" note = "0" id_question = "3" />
+    <reponse id_reponse = "11" libelle = "Réponse 2" descriptif = "Descriptif Réponse 2 Question 3" est_correcte = "1" note = "9" id_question = "3" />
+    <reponse id_reponse = "12" libelle = "Réponse 3" descriptif = "Descriptif Réponse 3 Question 3" est_correcte = "0" note = "0" id_question = "3" />
+    <reponse id_reponse = "13" libelle = "Réponse 1" descriptif = "Descriptif Réponse 1 Question 21" est_correcte = "0" note = "0" id_question = "21" />
+    <reponse id_reponse = "14" libelle = "Réponse 2" descriptif = "Descriptif Réponse 2 Question 21" est_correcte = "1" note = "3" id_question = "21" />
+    <reponse id_reponse = "15" libelle = "Réponse 3" descriptif = "Descriptif Réponse 3 Question 21" est_correcte = "1" note = "3" id_question = "21" />
+    <reponse id_reponse = "16" libelle = "Réponse 4" descriptif = "Descriptif Réponse 4 Question 21" est_correcte = "0" note = "0" id_question = "21" />
+    <reponse id_reponse = "17" libelle = "Réponse 5" descriptif = "Descriptif Réponse 5 Question 21" est_correcte = "0" note = "0" id_question = "21" />
+    <reponse id_reponse = "18" libelle = "Réponse 1" descriptif = "Descriptif Réponse 1 Question 6" est_correcte = "0" note = "0" id_question = "6" />
+
+    <reponse id_reponse = "19" libelle = "un langage de programmation"                                                                                         descriptif = "" est_correcte = "1" note = "2"  id_question = "22" />
+    <reponse id_reponse = "20" libelle = "un navigateur internet"                                                                                              descriptif = "" est_correcte = "0" note = "-1" id_question = "22" />
+    <reponse id_reponse = "21" libelle = "un ensemble de bibliothèques de classes"                                                                             descriptif = "" est_correcte = "1" note = "2"  id_question = "22" />
+    <reponse id_reponse = "22" libelle = "un système d'exploitation"                                                                                           descriptif = "" est_correcte = "0" note = "-1" id_question = "22" />
+    <reponse id_reponse = "23" libelle = "Java est un langage portable"                                                                                        descriptif = "" est_correcte = "1" note = "2"  id_question = "23" />
+    <reponse id_reponse = "24" libelle = "Java est un langage faiblement typé"                                                                                 descriptif = "" est_correcte = "0" note = "-1" id_question = "23" />
+    <reponse id_reponse = "25" libelle = "Java est un langage orienté objet"                                                                                   descriptif = "" est_correcte = "1" note = "2"  id_question = "23" />
+    <reponse id_reponse = "26" libelle = "Java est un langage propre à une machine"                                                                            descriptif = "" est_correcte = "0" note = "-1" id_question = "23" />
+    <reponse id_reponse = "27" libelle = "Java est un langage sécurisé"                                                                                        descriptif = "" est_correcte = "1" note = "1"  id_question = "23" />
+    <reponse id_reponse = "28" libelle = "un ensemble de méthodes et d'objets"                                                                                 descriptif = "" est_correcte = "0" note = "-1" id_question = "24" />
+    <reponse id_reponse = "29" libelle = "du code Java compilé"                                                                                                descriptif = "" est_correcte = "1" note = "3"  id_question = "24" />
+    <reponse id_reponse = "30" libelle = "un ensemble de définitions relatives à la sécurité qui sont utilisées par la machine virtuelle Java"                 descriptif = "" est_correcte = "0" note = "-1" id_question = "24" />
+    <reponse id_reponse = "31" libelle = "une collection organisée d'objets (par exemple triée par ordre alphabétique)"                                        descriptif = "" est_correcte = "0" note = "-1" id_question = "24" />
+    <reponse id_reponse = "32" libelle = "Java Mobile Edition"                                                                                                 descriptif = "" est_correcte = "0" note = "-1" id_question = "25" />
+    <reponse id_reponse = "33" libelle = "Java Standard Edition"                                                                                               descriptif = "" est_correcte = "0" note = "-1" id_question = "25" />
+    <reponse id_reponse = "34" libelle = "Java Customer Edition"                                                                                               descriptif = "" est_correcte = "1" note = "3"  id_question = "25" />
+    <reponse id_reponse = "35" libelle = "Java Card"                                                                                                           descriptif = "" est_correcte = "0" note = "-1" id_question = "25" />
+    <reponse id_reponse = "36" libelle = "Les packages javax.* sont uniquement disponibles dans Java EE"                                                       descriptif = "" est_correcte = "0" note = "-1" id_question = "26" />
+    <reponse id_reponse = "37" libelle = "Les bibliothèques Java standard sont uniquement fournies par SUN"                                                    descriptif = "" est_correcte = "0" note = "-1" id_question = "26" />
+    <reponse id_reponse = "38" libelle = "Les bibliothèques Java standard sont uniquement disponibles sous forme de code source"                               descriptif = "" est_correcte = "0" note = "-1" id_question = "26" />
+    <reponse id_reponse = "39" libelle = "Les bibliothèques Java standard sont développées sur base de la 'Java Community Process (JCP)'"                      descriptif = "" est_correcte = "1" note = "3"  id_question = "26" />
+    <reponse id_reponse = "40" libelle = "RMI (Remote Method Invocation)"                                                                                      descriptif = "" est_correcte = "0" note = "-1" id_question = "27" />
+    <reponse id_reponse = "41" libelle = "JMS (Java Messaging Service)"                                                                                        descriptif = "" est_correcte = "1" note = "3"  id_question = "27" />
+    <reponse id_reponse = "42" libelle = "JDBC (Java Database Connectivity)"                                                                                   descriptif = "" est_correcte = "0" note = "-1" id_question = "27" />
+    <reponse id_reponse = "43" libelle = "JNDI (Java Naming and Directory Interface)"                                                                          descriptif = "" est_correcte = "0" note = "-1" id_question = "27" />
+    <reponse id_reponse = "44" libelle = "des APIs Input/Output (java.io et java.nio)"                                                                         descriptif = "" est_correcte = "0" note = "-1" id_question = "28" />
+    <reponse id_reponse = "45" libelle = "des spécifications SQLJ"                                                                                             descriptif = "" est_correcte = "0" note = "-1" id_question = "28" />
+    <reponse id_reponse = "46" libelle = "de l'API JDBC 2.0"                                                                                                   descriptif = "" est_correcte = "1" note = "3"  id_question = "28" />
+    <reponse id_reponse = "47" libelle = "de l'API EJB"                                                                                                        descriptif = "" est_correcte = "0" note = "-1" id_question = "28" />
+    <reponse id_reponse = "48" libelle = "une application Java, qui est appelée à partir d'une autre quand et si celle-ci en a besoin"                         descriptif = "" est_correcte = "0" note = "-1" id_question = "29" />
+    <reponse id_reponse = "49" libelle = "une application Java qui est exécutée à partir d'un navigateur internet"                                             descriptif = "" est_correcte = "1" note = "3"  id_question = "29" />
+    <reponse id_reponse = "50" libelle = "une partie de code Java qui peut uniquement produire un output graphique"                                            descriptif = "" est_correcte = "0" note = "-1" id_question = "29" />
+    <reponse id_reponse = "51" libelle = "une petite application Java qui est toujours contenue dans un seul fichier"                                          descriptif = "" est_correcte = "0" note = "-1" id_question = "29" />
+    <reponse id_reponse = "52" libelle = "le 'class loader'"                                                                                                   descriptif = "" est_correcte = "1" note = "2" id_question = "30" />
+    <reponse id_reponse = "53" libelle = "le 'security guard'"                                                                                                 descriptif = "" est_correcte = "0" note = "-1" id_question = "30" />
+    <reponse id_reponse = "54" libelle = "le 'keystore'"                                                                                                       descriptif = "" est_correcte = "0" note = "-1" id_question = "30" />
+    <reponse id_reponse = "55" libelle = "le 'byte-code verifier'"                                                                                             descriptif = "" est_correcte = "1" note = "2" id_question = "30" />
+    <reponse id_reponse = "56" libelle = "un serveur web qui accepte Java"                                                                                     descriptif = "" est_correcte = "0" note = "-1" id_question = "31" />
+    <reponse id_reponse = "57" libelle = "une licence officielle du 'SUN Java Development Kit'"                                                                descriptif = "" est_correcte = "0" note = "-1" id_question = "31" />
+    <reponse id_reponse = "58" libelle = "une station de travail Linux ou UNIX avec une connexion internet permanente"                                         descriptif = "" est_correcte = "0" note = "-1" id_question = "31" />
+    <reponse id_reponse = "59" libelle = "l'applet dans un format .class"                                                                                      descriptif = "" est_correcte = "1" note = "3"  id_question = "31" />
+    <reponse id_reponse = "60" libelle = "a besoin d'un serveur web qui accepte les applications Java"                                                         descriptif = "" est_correcte = "0" note = "-1" id_question = "32" />
+    <reponse id_reponse = "61" libelle = "est une application Java qui peut être démarrée à partir du bouton Start dans Windows"                               descriptif = "" est_correcte = "0" note = "-1" id_question = "32" />
+    <reponse id_reponse = "62" libelle = "est basée sur le Java Network Launching Protocol"                                                                    descriptif = "" est_correcte = "1" note = "3"  id_question = "32" />
+    <reponse id_reponse = "63" libelle = "est utilisée afin de contourner le modèle de sécurité pour les applets"                                              descriptif = "" est_correcte = "0" note = "-1" id_question = "32" />
+    <reponse id_reponse = "64" libelle = "Swing API"                                                                                                           descriptif = "" est_correcte = "1" note = "2"  id_question = "33" />
+    <reponse id_reponse = "65" libelle = "Abstract Windowing Toolkit (AWT) API"                                                                                descriptif = "" est_correcte = "0" note = "-1" id_question = "33" />
+    <reponse id_reponse = "66" libelle = "PnP (Plug and Play) API"                                                                                             descriptif = "" est_correcte = "0" note = "-1" id_question = "33" />
+    <reponse id_reponse = "67" libelle = "Standard Widget Toolkit (SWT) API"                                                                                   descriptif = "" est_correcte = "1" note = "2"  id_question = "33" />
+    <reponse id_reponse = "68" libelle = "passer des instructions au compilateur"                                                                              descriptif = "" est_correcte = "1" note = "2"  id_question = "34" />
+    <reponse id_reponse = "69" libelle = "faciliter l'intégration avec d'autres langages non-Java"                                                             descriptif = "" est_correcte = "0" note = "-1" id_question = "34" />
+    <reponse id_reponse = "70" libelle = "générer d'autres fichiers de class"                                                                                  descriptif = "" est_correcte = "1" note = "2"  id_question = "34" />
+    <reponse id_reponse = "71" libelle = "générer des rapports de performance"                                                                                 descriptif = "" est_correcte = "0" note = "-1" id_question = "34" />
+    <reponse id_reponse = "72" libelle = "un mécanisme de délégation d'évènements"                                                                             descriptif = "" est_correcte = "0" note = "-1" id_question = "35" />
+    <reponse id_reponse = "73" libelle = "la persistence"                                                                                                      descriptif = "" est_correcte = "0" note = "-1" id_question = "35" />
+    <reponse id_reponse = "74" libelle = "la customisation de méthodes"                                                                                        descriptif = "" est_correcte = "0" note = "-1" id_question = "35" />
+    <reponse id_reponse = "75" libelle = "l'introspection"                                                                                                     descriptif = "" est_correcte = "1" note = "3"  id_question = "35" />
+    <reponse id_reponse = "76" libelle = "des routines pour l'accès aux bases de données"                                                                      descriptif = "" est_correcte = "0" note = "2"  id_question = "36" />
+    <reponse id_reponse = "77" libelle = "des applications sécurisées"                                                                                         descriptif = "" est_correcte = "0" note = "-1" id_question = "36" />
+    <reponse id_reponse = "78" libelle = "des applications côté serveur, une alternative aux scripts CGI"                                                      descriptif = "" est_correcte = "1" note = "2"  id_question = "36" />
+    <reponse id_reponse = "79" libelle = "des applets spéciaux, utilisés pour appeler des fonctions du système d'exploitation"                                 descriptif = "" est_correcte = "0" note = "-1" id_question = "36" />
+    <reponse id_reponse = "80" libelle = "un applet"                                                                                                           descriptif = "" est_correcte = "0" note = "-1" id_question = "37" />
+    <reponse id_reponse = "81" libelle = "une application Java"                                                                                                descriptif = "" est_correcte = "0" note = "-1" id_question = "37" />
+    <reponse id_reponse = "82" libelle = "un servlet"                                                                                                          descriptif = "" est_correcte = "1" note = "3"  id_question = "37" />
+    <reponse id_reponse = "83" libelle = "un scriptlet"                                                                                                        descriptif = "" est_correcte = "0" note = "-1" id_question = "37" />
+    <reponse id_reponse = "84" libelle = "les composants transactionnels"                                                                                      descriptif = "" est_correcte = "1" note = "2"  id_question = "38" />
+    <reponse id_reponse = "85" libelle = "la sécurité côté client et le cryptage"                                                                              descriptif = "" est_correcte = "0" note = "-1" id_question = "38" />
+    <reponse id_reponse = "86" libelle = "les composants objets distribués"                                                                                    descriptif = "" est_correcte = "1" note = "2"  id_question = "38" />
+    <reponse id_reponse = "87" libelle = "une architecture MVC (Model-View-Controller)"                                                                        descriptif = "" est_correcte = "0" note = "-1" id_question = "38" />
+    <reponse id_reponse = "88" libelle = "Un serveur web"                                                                                                      descriptif = "" est_correcte = "0" note = "-1" id_question = "39" />
+    <reponse id_reponse = "89" libelle = "Un container d'EJB"                                                                                                  descriptif = "" est_correcte = "1" note = "3"  id_question = "39" />
+    <reponse id_reponse = "90" libelle = "Un serveur d'applications"                                                                                           descriptif = "" est_correcte = "0" note = "-1" id_question = "39" />
+    <reponse id_reponse = "91" libelle = "Un serveur de bases de données"                                                                                      descriptif = "" est_correcte = "0" note = "-1" id_question = "39" />
+    <reponse id_reponse = "92" libelle = "doivent être construites à l'aide d'un IDE Java"                                                                     descriptif = "" est_correcte = "0" note = "-1" id_question = "40" />
+    <reponse id_reponse = "93" libelle = "ne peuvent être exécutées sur différentes machines que si ces machines tournent avec le même système d'exploitation" descriptif = "" est_correcte = "0" note = "-1" id_question = "40" />
+    <reponse id_reponse = "94" libelle = "sont typiquement basées sur des servlets, des JSP et des Enterprise Java Beans"                                      descriptif = "" est_correcte = "1" note = "3"  id_question = "40" />
+    <reponse id_reponse = "95" libelle = "n'ont pas besoin d'un environnement 'runtime'"                                                                       descriptif = "" est_correcte = "0" note = "-1" id_question = "40" />
+    <reponse id_reponse = "96" libelle = "Java ME définit une machine virtuelle K spéciale dans l'application de référence"                                    descriptif = "" est_correcte = "0" note = "-1" id_question = "41" />
+    <reponse id_reponse = "97" libelle = "Java ME est limité aux appareils équipés de moins d'1 MB de mémoire"                                                 descriptif = "" est_correcte = "1" note = "3"  id_question = "41" />
+    <reponse id_reponse = "98" libelle = "Java ME dispose des capacités pour faire des applications GUI"                                                       descriptif = "" est_correcte = "0" note = "-1" id_question = "41" />
+    <reponse id_reponse = "99" libelle = "Java ME supporte l'accès distant via RMI"                                                                            descriptif = "" est_correcte = "0" note = "-1" id_question = "41" />
+
+
+    <questionnaire id_questionnaire = "1" libelle = "Les exceptions en Java"  date_creation = "0002-11-30 00:00:00" limite_temps = "30" id_niveau = "1" id_theme = "1" id_user = "1" est_actif="1" />
+    <questionnaire id_questionnaire = "2" libelle = "L'héritage en Ruby"      date_creation = "0002-11-30 00:00:00" limite_temps = "20" id_niveau = "2" id_theme = "2" id_user = "1" est_actif="1" />
+    <questionnaire id_questionnaire = "3" libelle = "Le polymorphisme en C++" date_creation = "0002-11-30 00:00:00" limite_temps = "45" id_niveau = "1" id_theme = "3" id_user = "2" est_actif="1" />
+    <questionnaire id_questionnaire = "4" libelle = "Test"                    date_creation = "0002-11-30 00:00:00" limite_temps = "45" id_niveau = "1" id_theme = "4" id_user = "2" est_actif="1" />
+    <questionnaire id_questionnaire = "5" libelle = "Concepts de Java"        date_creation = "0002-11-30 00:00:00" limite_temps = "45" id_niveau = "1" id_theme = "1" id_user = "1" est_actif="1" />
+
+
+    <contenu id_contenu = "1"  id_questionnaire = "1" id_question = "1"  />
+    <contenu id_contenu = "2"  id_questionnaire = "1" id_question = "2"  />
+    <contenu id_contenu = "3"  id_questionnaire = "1" id_question = "3"  />
+    <contenu id_contenu = "4"  id_questionnaire = "2" id_question = "11" />
+    <contenu id_contenu = "5"  id_questionnaire = "2" id_question = "12" />
+    <contenu id_contenu = "6"  id_questionnaire = "4" id_question = "21" />
+	<contenu id_contenu = "7"  id_questionnaire = "5" id_question = "22" />
+	<contenu id_contenu = "8"  id_questionnaire = "5" id_question = "23" />
+	<contenu id_contenu = "9"  id_questionnaire = "5" id_question = "24" />
+	<contenu id_contenu = "10" id_questionnaire = "5" id_question = "25" />
+	<contenu id_contenu = "11" id_questionnaire = "5" id_question = "26" />
+	<contenu id_contenu = "12" id_questionnaire = "5" id_question = "27" />
+	<contenu id_contenu = "13" id_questionnaire = "5" id_question = "28" />
+	<contenu id_contenu = "14" id_questionnaire = "5" id_question = "29" />
+	<contenu id_contenu = "15" id_questionnaire = "5" id_question = "30" />
+	<contenu id_contenu = "16" id_questionnaire = "5" id_question = "31" />
+	<contenu id_contenu = "17" id_questionnaire = "5" id_question = "32" />
+	<contenu id_contenu = "18" id_questionnaire = "5" id_question = "33" />
+	<contenu id_contenu = "19" id_questionnaire = "5" id_question = "34" />
+	<contenu id_contenu = "20" id_questionnaire = "5" id_question = "35" />
+	<contenu id_contenu = "21" id_questionnaire = "5" id_question = "36" />
+	<contenu id_contenu = "22" id_questionnaire = "5" id_question = "37" />
+	<contenu id_contenu = "23" id_questionnaire = "5" id_question = "38" />
+	<contenu id_contenu = "24" id_questionnaire = "5" id_question = "39" />
+	<contenu id_contenu = "25" id_questionnaire = "5" id_question = "40" />
+	<contenu id_contenu = "26" id_questionnaire = "5" id_question = "41" />
+
+
+    <questionnaire_passe id_questionnaire = "1" id_user = "1" note = "15" date = "0002-11-30 00:00:00" temps = "30" />
+    <questionnaire_passe id_questionnaire = "2" id_user = "1" note = "10" date = "0002-11-30 00:00:00" temps = "20" />
+    <questionnaire_passe id_questionnaire = "3" id_user = "1" note = "5"  date = "0002-11-30 00:00:00" temps = "45" />
+    <questionnaire_passe id_questionnaire = "1" id_user = "2" note = "15" date = "0002-11-30 00:00:00" temps = "30" />
+    <questionnaire_passe id_questionnaire = "2" id_user = "2" note = "10" date = "0002-11-30 00:00:00" temps = "20" />
+    <questionnaire_passe id_questionnaire = "3" id_user = "2" note = "5"  date = "0002-11-30 00:00:00" temps = "45" />
+    <questionnaire_passe id_questionnaire = "1" id_user = "3" note = "15" date = "0002-11-30 00:00:00" temps = "30" />
+    <questionnaire_passe id_questionnaire = "2" id_user = "3" note = "10" date = "0002-11-30 00:00:00" temps = "20" />
+    <questionnaire_passe id_questionnaire = "3" id_user = "3" note = "5"  date = "0002-11-30 00:00:00" temps = "45" />
+
+    <!--<questionnaire_passe /> Pour le respect des contraintes d'intégrité-->
+    <user_reponse />  <!--Pour le respect des contraintes d'intégrité-->
+</dataset>
