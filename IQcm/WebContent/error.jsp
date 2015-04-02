@@ -4,38 +4,32 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <link rel="stylesheet" href="<%= request.getContextPath() %>/css/screen.css" type="text/css" media="screen" title="css" charset="utf-8" />
-        <title>Projet QCM</title>
+        <link rel="stylesheet" href="<%= request.getContextPath() %>/css/bootstrap.css" type="text/css" media="screen" title="css" charset="utf-8" />
+		<link rel="stylesheet" href="<%= request.getContextPath() %>/css/index.css" type="text/css" media="screen" title="css" charset="utf-8" />
+ 		<title>Projet QCM</title>
     </head>
     <body>
-        <div id="content">
-            <p id="top">Une erreur s'est produite</p>
-            <div id="logo">
-                <h1><a href="index.jsp">Qcm Generator</a></h1>
-            </div>
-            <div class="line"></div>
-
-            <div id="body">
-                <h1>Vous avez rencontré une erreur</h1><br/><br/>
-                <%
-                        String error = (String)  request.getAttribute("errorMessage");
-
-                            if ( error != null) {
-                                out.println((String) request.getAttribute("errorMessage"));
-                            }
-              
-                            if(exception != null){
-                                out.println(exception.toString());
-
-                            }
-
-
-               %>
-            </div>
-
-            <div id="footer">
-                
-            </div>
-        </div>
+        <div class="container">
+            <jsp:include page="scripts/header.jsp" />
+            <div class="row">
+            	<div class="col-lg-12">		
+		                <h3 class="brownBold margbott2">Vous avez rencontré une erreur</h3><br/><br/>
+		                <%
+		                        String error = (String)  request.getAttribute("errorMessage");
+		
+		                            if ( error != null) {
+		                                out.println((String) request.getAttribute("errorMessage"));
+		                            }
+		              
+		                            if(exception != null){
+		                                out.println(exception.toString());
+		
+		                            }
+		
+		
+		               %>
+		            </div>
+		    	</div>
+			</div>
     </body>
 </html>
