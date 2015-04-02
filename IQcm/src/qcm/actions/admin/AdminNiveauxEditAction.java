@@ -22,7 +22,7 @@ public class AdminNiveauxEditAction extends AdminAction {
                     Niveau theme = NiveauDAO.getById(idNiveau);
                     theme.setLibelle(libelle);
                     NiveauDAO.update(theme);
-                    request.setAttribute("message", "La modification du niveau s'est d√©roul√©e correctement.");
+                    request.setAttribute("message", "La modification du niveau s'est déroulée correctement.");
                 }
                 ActionHelper.setAttributeNiveaux(request);
                 setView("/admin/gererNiveaux.jsp");

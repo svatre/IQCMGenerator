@@ -1,7 +1,7 @@
 package qcm.models;
 
 /**
- * DÃ©finit un thÃ¨me de questionnaire
+ * Dfinit un thÃ¨me de questionnaire
  * @author Ingesup
  */
 public class Theme {
@@ -13,8 +13,8 @@ public class Theme {
     private boolean estActif;
 
     public Theme(Integer idTheme, int idUser, String libelle, int utilisations, boolean estActif) {
-        assert libelle != null && !libelle.matches("^\\s*$") : "Le Libelle ne doit Ãªtre ni null ni vide";
-        assert idTheme == null || idTheme > 0 : "idTheme doit Ãªtre non nÃ©gatif (reÃ§u: " + idTheme + " )";
+        assert libelle != null && !libelle.matches("^\\s*$") : "Le Libelle ne doit tre ni null ni vide";
+        assert idTheme == null || idTheme > 0 : "idTheme doit tre non ngatif (id: " + idTheme + " )";
         assert idUser > 0;
         this.idTheme = idTheme;
         this.libelle = libelle;
@@ -29,7 +29,7 @@ public class Theme {
     }
 
     public void setIdTheme(int idTheme) {
-        assert idTheme > 0 : "idTheme doit Ãªtre non nÃ©gatif (reÃ§u: " + idTheme + " )";
+        assert idTheme > 0 : "idTheme doit tre non ngatif (id: " + idTheme + " )";
         this.idTheme = idTheme;
         assert invariant();
     }
@@ -49,7 +49,7 @@ public class Theme {
     }
 
     public void setLibelle(String libelle) {
-        assert libelle != null && !libelle.matches("^\\s*$") : "Le Libelle ne doit Ãªtre ni null ni vide";
+        assert libelle != null && !libelle.matches("^\\s*$") : "Le Libelle ne doit tre ni null ni vide";
         this.libelle = libelle;
         assert invariant();
     }
@@ -67,7 +67,7 @@ public class Theme {
     }
 
     protected boolean invariant() {
-        assert getLibelle() != null && !getLibelle().matches("^\\s*$") : "Le Libelle ne doit Ãªtre ni null ni vide";
+        assert getLibelle() != null && !getLibelle().matches("^\\s*$") : "Le Libelle ne doit tre ni null ni vide";
         assert getIdUser() > 0;
         assert getIdTheme() == null || getIdTheme() > 0;
         return true;

@@ -15,11 +15,11 @@ public class AdminNiveauxControleAction extends AdminAction {
             Niveau niveau = NiveauDAO.getById(idNiveau);
             niveau.setEstActif(estActif);
             NiveauDAO.update(niveau);
-            String message = "Le niveau <strong>" + niveau.getLibelle() + "</strong> a √©t√© ";
+            String message = "Le niveau <strong>" + niveau.getLibelle() + "</strong> a été ";
             if (estActif) {
-                message += "activ√©";
+                message += "activé";
             } else {
-                message += "d√©sactiv√©";
+                message += "désactivé";
             }
             request.setAttribute("message", message);
         } else {

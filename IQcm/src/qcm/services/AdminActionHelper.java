@@ -19,7 +19,7 @@ public class AdminActionHelper {
         Matcher m = p.matcher(email.toUpperCase());
         boolean ok = m.matches();
         if (!ok) {
-            request.setAttribute("emailError", "L'email saisi n'Ã©tait pas correct");
+            request.setAttribute("emailError", "L'email saisi n'Žtait pas correct");
         }
         return ok;
     }

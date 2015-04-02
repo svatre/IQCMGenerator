@@ -9,8 +9,8 @@ import java.util.List;
 import qcm.services.Helper;
 
 /**
- * La classe Questionnaire est dÃ©finie par un identifiant, un thÃ¨me, un niveau,
- * un utilisateur qui a crÃ©Ã© le questionnaire, un libellÃ©, la date de crÃ©ation,
+ * La classe Questionnaire est dŽfinie par un identifiant, un thÃ¨me, un niveau,
+ * un utilisateur qui a crŽŽ le questionnaire, un libellŽ, la date de crŽation,
  * la limite de temps, le statut s'il est actif ou non et une collection de
  * questions le constituant.
  * 
@@ -127,7 +127,7 @@ public class Questionnaire {
     }
 
     public void setIdNiveau(final int idNiveau) {
-        assert idNiveau > 0 : "L'identifiant du niveau doit Ãªtre > 0";
+        assert idNiveau > 0 : "L'identifiant du niveau doit tre > 0";
         assert !estPasse();
         this.idNiveau = idNiveau;
         assert invariant();
@@ -138,7 +138,7 @@ public class Questionnaire {
     }
 
     public void setIdQuestionnaire(final Integer idQuestionnaire) {
-        assert idQuestionnaire == null || idQuestionnaire > 0 : "Le numÃ©ro du questionnaire doit Ãªtre positif";
+        assert idQuestionnaire == null || idQuestionnaire > 0 : "Le numŽro du questionnaire doit tre positif";
         assert !estPasse();
         this.idQuestionnaire = idQuestionnaire;
         assert invariant();
@@ -261,7 +261,7 @@ public class Questionnaire {
     public boolean invariant() {
         assert getLibelle() != null && !getLibelle().matches("^\\s*$");
         assert getLimiteTemps() == null || getLimiteTemps() > 0;
-        assert getIdQuestionnaire() == null || getIdQuestionnaire() > 0 : "Le numÃ©ro du questionnaire doit Ãªtre positif";
+        assert getIdQuestionnaire() == null || getIdQuestionnaire() > 0 : "Le numŽro du questionnaire doit tre positif";
         assert getIdUser() > 0;
         assert getIdNiveau() > 0;
         assert getIdTheme() > 0;

@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import qcm.models.Reponse;
 
 /**
- * Gère les accès à la base de données pour les réponses
+ * Gère les accès à la base de donn�es pour les r�ponses
  * @author Ingesup
  */
 public class ReponseDAO extends ModeleDAO {

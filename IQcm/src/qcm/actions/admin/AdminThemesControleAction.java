@@ -15,11 +15,11 @@ public class AdminThemesControleAction extends AdminAction {
             Theme theme = ThemeDAO.getById(idTheme);
             theme.setEstActif(estActif);
             ThemeDAO.update(theme);
-            String message = "Le th√®me <strong>" + theme.getLibelle() + "</strong> a √©t√© ";
+            String message = "Le th√®me <strong>" + theme.getLibelle() + "</strong> a été ";
             if (estActif) {
-                message += "activ√©";
+                message += "activé";
             } else {
-                message += "d√©sactiv√©";
+                message += "désactivé";
             }
             request.setAttribute("message", message);
         } else {

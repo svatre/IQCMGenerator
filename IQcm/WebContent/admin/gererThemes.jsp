@@ -55,7 +55,7 @@
 	            </form>
 	        </td>
 	        <% } else {%>
-	        <td class="centered" colspan="3"><small>Ce thème ne peut pas être modifié ou supprimé.</small></td>
+	        <td class="centered" colspan="3"><small>Ce thème est utilisé dans un questionnaire et ne peut être modifié ou supprimé.</small></td>
 	        <% }%>
 	    </tr>
 	</tbody>

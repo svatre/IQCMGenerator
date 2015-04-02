@@ -48,32 +48,32 @@ public class AdminUsersAddAction extends AdminAction {
             }
             if (login.isEmpty()) {
                 ok = false;
-                errorMessage += "<li>Le login ne doit pas √™tre vide</li>";
+                errorMessage += "<li>Le login ne doit pas être vide</li>";
                 errors.put("login", "");
             }
             if (email.isEmpty()) {
                 ok = false;
-                errorMessage += "<li>L'email ne doit pas √™tre vide</li>";
+                errorMessage += "<li>L'email ne doit pas être vide</li>";
                 errors.put("email", "");
             }
             if (nom.isEmpty()) {
                 ok = false;
-                errorMessage += "<li>Le nom ne doit pas √™tre vide</li>";
+                errorMessage += "<li>Le nom ne doit pas être vide</li>";
                 errors.put("nom", "");
             }
             if (prenom.isEmpty()) {
                 ok = false;
-                errorMessage += "<li>Le pr√©nom ne doit pas √™tre vide</li>";
+                errorMessage += "<li>Le prénom ne doit pas être vide</li>";
                 errors.put("prenom", "");
             }
             if (password.isEmpty()) {
                 ok = false;
-                errorMessage += "<li>Le mot de passe ne doit pas √™tre vide</li>";
+                errorMessage += "<li>Le mot de passe ne doit pas être vide</li>";
                 errors.put("password", "");
             }
             if (!password.equals(passwordVerification)) {
                 ok = false;
-                errorMessage += "<li>Les mots de passe doivent √™tre identiques</li>";
+                errorMessage += "<li>Les mots de passe doivent être identiques</li>";
                 errors.put("password", "");
                 errors.put("passwordVerification", "");
             }
@@ -93,7 +93,7 @@ public class AdminUsersAddAction extends AdminAction {
                 User user = new User(null, login, password, email, nom, prenom, statut, true);
 
                 UserDAO.insert(user);
-                request.setAttribute("message", "L'utilisateur a √©t√© ajout√©");
+                request.setAttribute("message", "L'utilisateur a été ajouté");
                 HashMap<Integer, User> users = UserDAO.getAll();
                 request.setAttribute("users", users);
                 setView("/admin/gererUtilisateurs.jsp");

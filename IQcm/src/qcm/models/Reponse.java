@@ -1,10 +1,10 @@
 package qcm.models;
 
 /**
- * R√©ponse √† une question. Poss√®de un num√©ro (idReponse), une note qui est
- * propre √† chaque question, un libell√© court et un descriptif de la r√©ponse
- * (r√©ponse plus d√©taill√©e), le num√©ro de la question en rapport avec la
- * r√©ponse et un booleen qui d√©termine si la r√©ponse est bonne ou non.
+ * Réponse √† une question. Poss√®de un numéro (idReponse), une note qui est
+ * propre √† chaque question, un libellé court et un descriptif de la réponse
+ * (réponse plus détaillée), le numéro de la question en rapport avec la
+ * réponse et un booleen qui détermine si la réponse est bonne ou non.
  *
  * <blockquote>
  * <strong>Invariants :</strong><br />
@@ -124,7 +124,7 @@ public class Reponse {
         assert getIdQuestion() > 0;
         assert getIdReponse() > 0;
         if (estCorrecte()) {
-            assert getNote() > 0 : "Une r√©ponse correcte doit avoir une note positive";
+            assert getNote() > 0 : "Une réponse correcte doit avoir une note positive";
         }
         return true;
     }

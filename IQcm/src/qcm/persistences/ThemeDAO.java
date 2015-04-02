@@ -7,9 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import qcm.models.Theme;
+import qcm.models.User;
 
 /**
- * Gère les accès à la base de données pour les themes
+ * Gère les accès à la base de donn�es pour les themes
  * @author Ingesup
  */
 public class ThemeDAO extends ModeleDAO {
@@ -86,6 +87,17 @@ public class ThemeDAO extends ModeleDAO {
         ps.setString(1, theme.getLibelle());
         ps.setBoolean(2, theme.estActif());
         ps.setInt(3, theme.getIdTheme());
+        ps.executeUpdate();
+        ps.close();
+    }
+    
+    public static void insert(Theme theme) throws SQLException {
+        String sql = "INSERT INTO theme (id_theme, libelle, est_actif, id_user) VALUES (NULL, ?, ?, ?)";
+        PreparedStatement ps = getConnection().prepareStatement(sql);
+        ps.setString(1, theme.getLibelle());
+        ps.setBoolean(2, theme.estActif());
+        ps.setInt(3, theme.getIdUser());
+
         ps.executeUpdate();
         ps.close();
     }

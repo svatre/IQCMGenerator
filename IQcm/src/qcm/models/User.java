@@ -1,7 +1,7 @@
 package qcm.models;
 
 /**
- * Classe qui repr√©sente un utilisateur de l'application
+ * Classe qui représente un utilisateur de l'application
  * @author Ingesup
  */
 public class User {
@@ -42,7 +42,7 @@ public class User {
     }
 
     public void setLogin(String login) {
-        assert login != null && !login.matches("^\\s*$") : "Le login ne doit √™tre ni null ni vide";
+        assert login != null && !login.matches("^\\s*$") : "Le login ne doit être ni null ni vide";
         this.login = login;
         assert invariant();
     }
@@ -52,7 +52,7 @@ public class User {
     }
 
     public void setPassword(String password) {
-        assert password != null && !password.matches("^\\s*$") : "Le t de passe ne doit √™tre ni null ni vide";
+        assert password != null && !password.matches("^\\s*$") : "Le t de passe ne doit être ni null ni vide";
         this.password = password;
         assert invariant();
     }
@@ -62,7 +62,7 @@ public class User {
     }
 
     public void setEmail(String email) {
-        assert email != null && !email.matches("^[a-z0-9._#&*-]+@[a-z0-9.#&*-]{2,}\\.[a-z]{2,4}$") : "L'email ne doit √™tre ni null ni non valide ";
+        assert email != null && !email.matches("^[a-z0-9._#&*-]+@[a-z0-9.#&*-]{2,}\\.[a-z]{2,4}$") : "L'email ne doit être ni null ni non valide ";
         this.email = email;
         assert invariant();
     }
@@ -142,9 +142,9 @@ public class User {
 
     protected boolean invariant() {
         assert getIdUser() == null || getIdUser() > 0;
-        assert getLogin() != null && !getLogin().matches("^\\s*$") : "Le getLogin() ne doit √™tre ni null ni vide";
-        assert getPassword() != null && !getPassword().matches("^\\s*$") : "Le getLogin() ne doit √™tre ni null ni vide";
-        assert getEmail() != null && !getEmail().matches("^[a-z0-9._#&*-]+@[a-z0-9.#&*-]{2,}\\.[a-z]{2,4}$") : "L'email ne doit √™tre ni null ni non valide ";
+        assert getLogin() != null && !getLogin().matches("^\\s*$") : "Le getLogin() ne doit être ni null ni vide";
+        assert getPassword() != null && !getPassword().matches("^\\s*$") : "Le getLogin() ne doit être ni null ni vide";
+        assert getEmail() != null && !getEmail().matches("^[a-z0-9._#&*-]+@[a-z0-9.#&*-]{2,}\\.[a-z]{2,4}$") : "L'email ne doit être ni null ni non valide ";
 
         return true;
     }
