@@ -7,14 +7,14 @@
             Integer niveau = (Integer) request.getAttribute("niveau");
 %>
 
-<div class="choice">
+
     <form id="choix_questionnaire_form" action="<%= request.getContextPath() %>/passerQuestionnaire/listeQuestionnaires.html" method="post" accept-charset="utf-8">
 
-        <table class="no-border">
+        <table class="table table-bordered table-hover margleft margtop2">
             <tr>
-                <td class="static"><label for="theme">Choisissez le thème : </label></td>
+                <td class="static"><label for="theme">Choisissez le thème </label></td>
                 <td>
-                    <select name="theme" id="theme" class="medium-input" onchange="document.getElementById('choix_questionnaire_form').submit();">
+                    <select name="theme" id="theme" class="form-control" onchange="document.getElementById('choix_questionnaire_form').submit();">
                         <option value="0"></option>
                         <%
                                     List<Theme> themes = (List<Theme>) request.getAttribute("themes");
@@ -34,7 +34,7 @@
             <tr>
                 <td class="static"><label for="niveau">Choisissez le niveau : </label></td>
                 <td>
-                    <select name="niveau" id="niveau" class="medium-input" onchange="document.getElementById('choix_questionnaire_form').submit();">
+                    <select name="niveau" id="niveau" class="form-control" onchange="document.getElementById('choix_questionnaire_form').submit();">
                         <option value="0"></option>
                         <%
                                     List<Niveau> niveaux = (List<Niveau>) request.getAttribute("niveaux");
@@ -55,20 +55,18 @@
 
         <input type="hidden" name="action" value="choixQuestionnaire"/>
     </form>
-</div>
-<div class="line"></div>
 
-<h4 id="liste_questionnaires">Liste des questionnaires</h4>
+<h4 id="liste_questionnaires" class="margleft brownBold margbott2">Liste des questionnaires</h4>
 <%
             Map<Integer, String> questionnaires = (Map) request.getAttribute("questionnaires");
             if (questionnaires != null) {
-                out.println("<p>Cliquez sur un questionnaire pour le commencer.</p>");
-                out.println("<ol class='liste'>");
+                out.println("<p class='margleft'>Cliquez sur un questionnaire pour le commencer.</p>");
+                out.println("<ol class='liste margleft'>");
                 for (Integer idQuestionnaire : questionnaires.keySet()) {
                     out.println("<a href='"+request.getContextPath()+"/passerQuestionnaire/choix.html?questionnaire=" + idQuestionnaire + "'><li>" + questionnaires.get(idQuestionnaire) + "</li></a>");
                 }
                 out.println("</ol>");
             } else {
-                out.println("<p>Choisissez un thème et/ou un niveau</p>");
+                out.println("<p class='margleft'>Choisissez un thème et/ou un niveau</p>");
             }
 %>

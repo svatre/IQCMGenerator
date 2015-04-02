@@ -7,9 +7,9 @@
     Questionnaire questionnaire = (Questionnaire) request.getAttribute("questionnaire");
     if (questionnaire != null) {
 %>
-    <div class="recapitule_questionnaire liste">
-        <h5>Récapitulé du questionnaire</h5>
-        <table>
+    <div class="recapitule_questionnaire liste margleft">
+        <h4 class="margleft brownBold margbott2">Récapitulatif du questionnaire</h4>
+        <table class="table table-bordered table-hover">
             <tr>
                 <td class="static">Titre</td>
                 <td><%=questionnaire.getLibelle()%></td>
@@ -37,7 +37,7 @@
     %>
 
 
-    <a href="<%= request.getContextPath() %>/passerQuestionnaire/index.html" class="button">Retour à la liste des questionnaires</a>
+    <a class="margleft" href="<%= request.getContextPath() %>/passerQuestionnaire/index.html" class="button">Retour à la liste des questionnaires</a>
 
     <%
                 if (request.getAttribute("userHasAlreadyPassedQuestionnaire") == null) {
@@ -45,7 +45,7 @@
 
     <form action="<%= request.getContextPath() %>/passerQuestionnaire/commencer.html" method="post" id="commencer_qcm_form">
         <input type="hidden" name="questionnaire" value="<%= questionnaire.getIdQuestionnaire()%>" />
-        <input type="submit" value="Commencer" class="button" />
+        <input class="btn btn-sm btn-primary margleft margtop" type="submit" value="Commencer" class="button" />
     </form>
     <%
                 } else {

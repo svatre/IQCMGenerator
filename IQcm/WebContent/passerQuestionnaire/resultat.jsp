@@ -19,9 +19,9 @@
         }
 
 %>
-<h4 id="liste">Résultats pour ce questionnaire</h4>
-<div id="score">
+<h4 id="liste" class="brownBold margbott2 margleft">Résultats pour ce questionnaire</h4>
+<div id="score" class="margleft">
     <p>Votre note : <br /><span class="score_value <%= (note < noteMax / 2) ? "mauvais" : "bon"%>"><%= note%> / <%= noteMax%></span></p>
 </div>
-<a class="button" href="<%= request.getContextPath() %>/index.html">Retour à l'accueil</a>
+<a class="button margleft" href="<%= request.getContextPath() %>/index.html">Retour à l'accueil</a>
                

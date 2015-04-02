@@ -6,8 +6,8 @@
     final Qcm qcm = (Qcm) request.getSession().getAttribute("qcm");
     if(!qcm.estFini()){
 %>
-<fieldset id="modifier_reponses" class="">
-    <legend>Liste des questions</legend>
+<fieldset id="modifier_reponses" class="margleft">
+    <p class="brownBold margbott2">Liste des questions</p>
     <ul class="questions">
         <%
                     List<Question> questions = qcm.getQuestionnaire().getQuestions();
@@ -30,13 +30,13 @@
 
 
 <form class="question" action="<%= request.getContextPath() %>/passerQuestionnaire/questionSuivante.html" method="post" accept-charset="utf-8">
-    <fieldset id="titre_questionnaire">
-        <legend><strong>Questionnaire : <%= titre_questionnaire%></strong></legend>
+    <fieldset id="titre_questionnaire" class="margleft margtop2">
+        <h4 class="brownBold margbott2 margtop">Questionnaire : <%= titre_questionnaire%></h4>
         <p>
             <%= questionCourante.getLibelle()%>
         </p>
     </fieldset>
-    <div id="reponses">
+    <div id="reponses" class="margleft">
 <%
         List<Reponse> reponses = questionCourante.getReponses();
         if (reponses != null) {
@@ -45,25 +45,25 @@
                 if (qcm.getUserReponses().get(reponse.getIdQuestion()).contains(reponse.getIdReponse())) {
                     out.print("checked='checked' ");
                 }
-                out.print("id='" + reponse.getIdReponse() + "' /><label for='" + reponse.getIdReponse() + "'>" + reponse.getLibelle() + "</label><br />");
+                out.print("id='" + reponse.getIdReponse() + "' /> <label for='" + reponse.getIdReponse() + "'>" + reponse.getLibelle() + "</label><br />");
             }
         }
 %>
     </div>
-    <p><input type="submit" value="Valider la question" /></p>
+    <p><input class="btn btn-sm btn-success margtop2 margleft" type="submit" value="Valider la question" /></p>
     <input type="hidden" name="idQuestion" value="<%= questionCourante.getIdQuestion()%>"/>
 </form>
 <div id="temps_restant">
     <form action="<%= request.getContextPath() %>/passerQuestionnaire/terminer.html" method="post" accept-charset="utf-8">
-        <input class="button" type="submit" value="Terminer maintenant &rarr;" />
+        <input class="btn btn-sm btn-info margleft" type="submit" value="Terminer maintenant &rarr;" />
     </form>
 </div>
 <%
        } else if (request.getAttribute("estFini") != null) {
 %>
-<div class="question">
+<div class="question margleft">
     <fieldset id="titre_questionnaire">
-        <legend><strong>Questionnaire fini : <%= titre_questionnaire%></strong></legend>
+        <h4 class="brownBold margbott2 margtop2">Questionnaire fini : <%= titre_questionnaire%></h4>
         <p>
 
         </p>
@@ -81,10 +81,10 @@
     </fieldset>
     <div>
             <form action="<%= request.getContextPath() %>/passerQuestionnaire/terminer.html" method="post" accept-charset="utf-8">
-                <input class="button" type="submit" value="Terminer maintenant &rarr;" />
+                <input class="btn btn-sm btn-info margleft" class="button" type="submit" value="Terminer maintenant &rarr;" />
             </form>
             <form action="<%= request.getContextPath() %>/passerQuestionnaire/modifierReponses.html" method="post" id="applyModif">
-                <input type="hidden" name="modifyQuestion" id="modifyQuestion" value="" />
+                <input class="btn btn-sm btn-warning margleft" type="hidden" name="modifyQuestion" id="modifyQuestion" value="" />
             </form>
     </div>
 </div>
