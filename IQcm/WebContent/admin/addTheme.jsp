@@ -4,7 +4,7 @@
 <%@page import="java.util.List"%>
 <%@page import="java.util.Map"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<h4>Ajouter un thème</h4>
+<h4 class="margleft brownBold margbott2">Ajouter un thème</h4>
 <jsp:include page="/scripts/errorViewHelper.jsp" />
 
 <%
@@ -14,10 +14,10 @@
 
 <div  class="choice">
     <form action="<%= request.getContextPath()%>/admin/themes/ajouter.html" method="post">
-        <table>
+        <table class="table table-hover">
             <tr>
                 <td><label for="libelle"><strong>Libellé : </strong></label></td>
-                <td><input type="text" name="libelle" id="libelle" size="50" class="medium-input
+                <td><input type="text" name="libelle" id="libelle" size="50" class="form-control
                            <% if ((errors != null) && errors.get("login").isEmpty()) {
                                            out.print("error-input");
                                        }
@@ -25,7 +25,7 @@
                            " value='<%= errors == null ? "" : errors.get("libelle")%>' /></td>
             </tr>
         </table>
-        <input type="submit" value="Enregistrer" class="button" />
-        <a href="<%= request.getContextPath()%>/admin/Themes/index.html" class="button">Annuler</a>
+        <input class=" btn btn-sm btn-success" type="submit" value="Enregistrer" />
+        <a class="btn btn-xs btn-danger" href="<%= request.getContextPath()%>/admin/Themes/index.html" class="button">Annuler</a>
     </form>
 </div>

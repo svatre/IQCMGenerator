@@ -11,6 +11,10 @@
             List<Theme> themes = (ArrayList) request.getAttribute("themes");
             if (themes != null) {
 %>
+
+<button class="btn btn-sm btn-primary margbott add">
+	<a href="<%= request.getContextPath()%>/admin/themes/ajouter.html">Ajouter un thème</a>
+</button>
 <table class="table table-bordered table-hover">
     <thead>
         <tr>

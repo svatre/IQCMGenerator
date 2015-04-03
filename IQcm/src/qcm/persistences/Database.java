@@ -18,7 +18,7 @@ public class Database {
     /**
      * URL de connexion a la base de données
      */
-    public static final String URL = "jdbc:mysql://localhost/QCM";
+    public static final String URL = "jdbc:mysql://localhost:8889/QCM";
     /**
      * Identifiant de l'utilisateur à fournir lors de la connexion
      */
